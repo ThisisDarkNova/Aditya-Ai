@@ -1,0 +1,16 @@
+title: "💡 Idea: Feature Proposals & Brainstorming"
+description: Propose general ideas, integrations, or brainstorm improvements for ADITYA OS.
+category: Ideas
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pitch your idea to the community and maintainers!
+  - type: textarea
+    id: idea
+    attributes:
+      label: Concept & Value
+      description: What is your idea and why is it useful to ADITYA OS users?
+      placeholder: E.g., Integrate third-party calendars for interactive alerts...
+    validations:
+      required: true

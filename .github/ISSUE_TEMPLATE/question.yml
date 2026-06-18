@@ -1,0 +1,19 @@
+name: "❓ Question"
+description: Ask a question about using or developing ADITYA OS.
+title: "[QUESTION]: "
+labels: ["question", "support"]
+body:
+  - type: textarea
+    id: query
+    attributes:
+      label: What is your question?
+      placeholder: E.g., How do I configure custom hotkeys for presence detection?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Describe what you are trying to achieve and what research/reading you've already done.
+    validations:
+      required: false

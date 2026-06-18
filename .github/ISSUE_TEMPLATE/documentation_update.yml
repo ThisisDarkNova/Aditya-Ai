@@ -1,0 +1,32 @@
+name: "📚 Documentation Update"
+description: Propose improvements, corrections, or additions to our docs.
+title: "[DOCS]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us keep our documentation clear, accurate, and up-to-date!
+  - type: textarea
+    id: documentation-part
+    attributes:
+      label: Which document needs updating?
+      description: Provide paths or links to the files that need changes.
+      placeholder: E.g., docs/API.md or README.md
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: Proposed Changes
+      description: Describe the changes or additions you would like to make.
+      placeholder: E.g., The setup instructions in README.md are missing python dependency checks...
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this change necessary?
+      placeholder: E.g., Prevents developer confusion when installing dependencies...
+    validations:
+      required: true

@@ -1,0 +1,59 @@
+{
+    "startup_enabled": false,
+    "startup_delay_seconds": 15,
+    "start_minimized": true,
+    "clap_enabled": true,
+    "clap_sensitivity": 0.95,
+    "wake_word_enabled": false,
+    "wake_word": "Hey Nova",
+    "hotkey_enabled": true,
+    "hotkey_sequence": "ctrl+alt+j",
+    "mic_permission_granted": true,
+    "gaming_mode": {
+        "enabled": true,
+        "auto_detect_games": true,
+        "suppress_notifications": true,
+        "valorant_priority": true
+    },
+    "model_name": "gemini-2.0-flash-exp",
+    "temperature": 0.75,
+    "api_key": "",
+    "memory_enabled": true,
+    "memory_depth": 100,
+    "agent_swarm_enabled": false,
+    "max_agent_loops": 10,
+    "allow_macros": true,
+    "auto_backup": true,
+    "theme": "glass",
+    "font_size": 14,
+    "reduce_motion": false,
+    "high_contrast": false,
+    "debug_mode": false,
+    "port": 7865,
+    "launch_directly_voice": true,
+    "restore_last_session": true,
+    "user": {
+        "name": "Durvish Sharma",
+        "alias": "DarkNova",
+        "language": "english_hindi_mix",
+        "response_length": "detailed",
+        "communication_style": "casual",
+        "interaction_tempo": "fast"
+    },
+    "predictive": {
+        "enabled": true,
+        "context_awareness": true,
+        "time_based_mode": true,
+        "afternoon_mode": "gaming_or_study",
+        "evening_mode": "streaming_or_editing",
+        "night_mode": "business_or_coding"
+    },
+    "notifications": {
+        "system_alerts": true,
+        "proactive_suggestions": true,
+        "gaming_mode_suppressed": true,
+        "battery_warning_threshold": 20,
+        "cpu_warning_threshold": 90,
+        "ram_warning_threshold": 90
+    }
+}

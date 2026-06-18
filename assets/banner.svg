@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="auto" style="background:#171717; border-radius:16px;">
+  <style>
+    .bg { fill: #171717; }
+    .core {
+      fill: #10b981;
+      filter: drop-shadow(0 0 15px #10b981);
+      animation: pulse-core 3s infinite ease-in-out;
+      transform-origin: 400px 130px;
+    }
+    .ring-1 {
+      stroke: #10b981;
+      stroke-width: 1.5;
+      stroke-dasharray: 40 180;
+      fill: none;
+      animation: spin-clockwise 8s infinite linear;
+      transform-origin: 400px 130px;
+      opacity: 0.7;
+    }
+    .ring-2 {
+      stroke: #34d399;
+      stroke-width: 1;
+      stroke-dasharray: 100 120;
+      fill: none;
+      animation: spin-counter 12s infinite linear;
+      transform-origin: 400px 130px;
+      opacity: 0.5;
+    }
+    .ring-3 {
+      stroke: #059669;
+      stroke-width: 2;
+      stroke-dasharray: 10 40;
+      fill: none;
+      animation: spin-clockwise 16s infinite linear;
+      transform-origin: 400px 130px;
+      opacity: 0.6;
+    }
+    .glow-ring {
+      stroke: #10b981;
+      stroke-width: 4;
+      fill: none;
+      opacity: 0.12;
+      animation: pulse-ring 3s infinite ease-in-out;
+      transform-origin: 400px 130px;
+    }
+    .brand-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 300;
+      fill: #ffffff;
+      letter-spacing: 14px;
+      font-size: 30px;
+      text-anchor: middle;
+      animation: text-glow 4s infinite ease-in-out;
+    }
+    .brand-subtext {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 400;
+      fill: #8a8a8a;
+      letter-spacing: 3px;
+      font-size: 11px;
+      text-anchor: middle;
+    }
+    @keyframes pulse-core {
+      0%, 100% { transform: scale(0.85); opacity: 0.75; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(0.88); opacity: 0.08; }
+      50% { transform: scale(1.12); opacity: 0.22; }
+    }
+    @keyframes spin-clockwise {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spin-counter {
+      to { transform: rotate(-360deg); }
+    }
+    @keyframes text-glow {
+      0%, 100% { fill: #ffffff; }
+      50% { fill: #a7f3d0; }
+    }
+  </style>
+  <rect width="100%" height="100%" class="bg" />
+  <circle cx="400" cy="130" r="110" class="glow-ring" />
+  <circle cx="400" cy="130" r="95" class="ring-3" />
+  <circle cx="400" cy="130" r="75" class="ring-2" />
+  <circle cx="400" cy="130" r="55" class="ring-1" />
+  <circle cx="400" cy="130" r="20" class="core" />
+  
+  <text x="407" y="235" class="brand-text">A E T H E R</text>
+  <text x="400" y="265" class="brand-subtext">SENTIENT COGNITIVE OPERATING SYSTEM</text>
+</svg>

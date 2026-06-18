@@ -1,0 +1,21 @@
+title: "❓ Q&A: Help & Questions"
+description: Ask the community for help or post general questions about using ADITYA OS.
+category: Q&A
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome to the Q&A discussion board! Ask any usage, coding, or deployment questions here.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What are you trying to do, and what issue are you facing?
+      placeholder: E.g., How can I configure the wake-word engine to listen to custom voice alerts?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: System Details
+      description: OS version, installation method, or hardware info.

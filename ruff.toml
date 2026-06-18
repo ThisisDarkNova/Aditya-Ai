@@ -1,0 +1,11 @@
+# Ruff configuration for ADITYA Python Core
+line-length = 100
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "W", "I", "N"]
+ignore = []
+
+[format]
+quote-style = "double"
+indent-style = "space"

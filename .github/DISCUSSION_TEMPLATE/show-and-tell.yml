@@ -1,0 +1,16 @@
+title: "🙌 Show and Tell: Share your Customizations"
+description: Show off your custom orb themes, modules, or smart presence scripts.
+category: Show and tell
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Show the community how you configured your ADITYA OS orb!
+  - type: textarea
+    id: showcase
+    attributes:
+      label: Description
+      description: Share screenshots, code snippets, or a video of your setup.
+      placeholder: E.g., Here's my customized WebGL shader configuration...
+    validations:
+      required: true

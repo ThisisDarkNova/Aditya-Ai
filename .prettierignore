@@ -1,0 +1,19 @@
+# Ignore dependencies
+node_modules/
+client/node_modules/
+package-lock.json
+
+# Ignore build outputs
+dist/
+client/dist/
+release/
+client/release/
+backend/dist/
+backend/build/
+
+# Ignore local files
+.env
+.env.*
+*.log
+*.sqlite3
+*.db

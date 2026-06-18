@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "color-hex-length": "short",
+    "font-family-no-missing-generic-family-keyword": true,
+    "declaration-colon-space-after": "always"
+  }
+}

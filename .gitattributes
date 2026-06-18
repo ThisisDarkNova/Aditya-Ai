@@ -1,0 +1,20 @@
+# Set default behavior to automatic text conversion
+* text=auto
+
+# Force LF line endings for coding scripts to avoid cross-platform runtime bugs
+*.py text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+
+# Denote binary files that must remain unchanged
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.bmp binary
+*.exe binary

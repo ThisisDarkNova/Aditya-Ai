@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software in your research or project reference, please cite it as below."
+authors:
+  - name: "ADITYA OS Core Contributors"
+title: "ADITYA OS: Sentient Cognitive Operating System"
+version: 1.0.0
+date-released: 2026-06-18
+url: "https://github.com/Aether/ADITYA-OS"
+repository-code: "https://github.com/Aether/ADITYA-OS"
+license: MIT
+keywords:
+  - "sentient-cognitive-os"
+  - "desktop-agent"
+  - "electron-app"
+  - "python-backend"
+  - "process-automation"

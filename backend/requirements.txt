@@ -1,0 +1,49 @@
+# ============================================
+# Aditya — Python Dependencies
+# ============================================
+
+# Core
+google-genai
+python-dotenv
+
+# Vision & Camera
+opencv-python
+Pillow
+
+# Object Detection
+# (Removed ultralytics)
+
+# OCR
+pytesseract
+
+# Audio (for voice assistant in main.py)
+pyaudio
+
+# Automation
+pyautogui
+pygetwindow
+psutil
+pyperclip
+
+# System control
+screen-brightness-control
+pycaw
+comtypes
+keyboard
+
+# Networking
+httpx
+
+# UI
+pywebview
+
+# Messaging
+pywhatkit
+
+# Optional: FastAPI server
+fastapi
+uvicorn
+
+# Added for Capabilities Expansion
+gputil
+pypdf

@@ -1,0 +1,72 @@
+name: "🐛 Bug Report"
+description: File a structured report to help us reproduce and fix a bug in ADITYA OS.
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill out the form below as accurately as possible.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: E.g., The application crashes immediately on launch with NameError...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Run 'npm run dev' in client directory
+        2. Launch the backend server
+        3. Click on 'Sync DB'
+        4. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: E.g., The application should sync successfully without any errors.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Console Output
+      description: Please paste any console logs, crash dumps, or stack traces here.
+      render: shell
+  - type: dropdown
+    id: environment
+    attributes:
+      label: OS Version
+      description: Which operating system version are you running?
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux (Ubuntu/Debian)
+        - macOS
+        - Other (please specify in comments)
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: ADITYA OS Version
+      placeholder: E.g. v1.0.0
+    validations:
+      required: true
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing issues to make sure this is not a duplicate.
+          required: true
+        - label: I have verified this behavior with the latest release version.
+          required: true

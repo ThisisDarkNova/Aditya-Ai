@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="auto" style="background:#171717; border-radius:16px;">
+  <style>
+    .bg { fill: #171717; }
+    .mem-node {
+      fill: #1a1a1a;
+      stroke: #8b5cf6;
+      stroke-width: 2;
+    }
+    .mem-glow {
+      fill: #8b5cf6;
+      filter: drop-shadow(0 0 10px #8b5cf6);
+      animation: pulse-mem 4s infinite ease-in-out;
+    }
+    .mem-line {
+      stroke: #6d28d9;
+      stroke-width: 1.5;
+      stroke-dasharray: 4 4;
+      animation: flow-mem 6s infinite linear;
+    }
+    .text-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #e5e7eb;
+      text-anchor: middle;
+    }
+    @keyframes pulse-mem {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 20px #a78bfa); }
+    }
+    @keyframes flow-mem {
+      to { stroke-dashoffset: -40px; }
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Connections -->
+  <line x1="400" y1="120" x2="200" y2="70" class="mem-line" />
+  <line x1="400" y1="120" x2="200" y2="170" class="mem-line" />
+  <line x1="400" y1="120" x2="600" y2="70" class="mem-line" />
+  <line x1="400" y1="120" x2="600" y2="170" class="mem-line" />
+  <line x1="200" y1="70" x2="100" y2="120" class="mem-line" />
+  <line x1="600" y1="70" x2="700" y2="120" class="mem-line" />
+
+  <!-- Central Core -->
+  <g transform="translate(400, 120)">
+    <circle cx="0" cy="0" r="40" class="mem-node" />
+    <circle cx="0" cy="0" r="15" class="mem-glow" />
+    <text x="0" y="60" class="text-title">User Profile</text>
+  </g>
+
+  <!-- Sub Nodes -->
+  <g transform="translate(200, 70)">
+    <circle cx="0" cy="0" r="25" class="mem-node" />
+    <circle cx="0" cy="0" r="8" class="mem-glow" style="animation-delay: 1s;" />
+    <text x="0" y="-35" class="text-title">Preferences</text>
+  </g>
+
+  <g transform="translate(200, 170)">
+    <circle cx="0" cy="0" r="25" class="mem-node" />
+    <circle cx="0" cy="0" r="8" class="mem-glow" style="animation-delay: 2s;" />
+    <text x="0" y="45" class="text-title">Goals</text>
+  </g>
+
+  <g transform="translate(600, 70)">
+    <circle cx="0" cy="0" r="25" class="mem-node" />
+    <circle cx="0" cy="0" r="8" class="mem-glow" style="animation-delay: 1.5s;" />
+    <text x="0" y="-35" class="text-title">Context History</text>
+  </g>
+
+  <g transform="translate(600, 170)">
+    <circle cx="0" cy="0" r="25" class="mem-node" />
+    <circle cx="0" cy="0" r="8" class="mem-glow" style="animation-delay: 2.5s;" />
+    <text x="0" y="45" class="text-title">Entities</text>
+  </g>
+  
+  <g transform="translate(100, 120)">
+    <circle cx="0" cy="0" r="15" class="mem-node" />
+    <circle cx="0" cy="0" r="4" class="mem-glow" style="animation-delay: 3s;" />
+    <text x="0" y="30" class="text-title" style="font-size: 10px;">Dark Mode</text>
+  </g>
+
+  <g transform="translate(700, 120)">
+    <circle cx="0" cy="0" r="15" class="mem-node" />
+    <circle cx="0" cy="0" r="4" class="mem-glow" style="animation-delay: 3.5s;" />
+    <text x="0" y="30" class="text-title" style="font-size: 10px;">Work Project</text>
+  </g>
+</svg>
