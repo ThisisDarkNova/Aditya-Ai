@@ -42,8 +42,10 @@ function killStaleAdityaProcesses() {
     const names = ['AdityaCore.exe', 'ADITYA.exe'];
     for (const name of names) {
         try {
-            const out = execSync(`tasklist /FI "IMAGENAME eq ${name}" /FO CSV /NH`, { stdio: ['ignore', 'pipe', 'ignore'] })
-                .toString();
+            const out = execSync(`tasklist /FI "IMAGENAME eq ${name}" /FO CSV /NH`, { 
+                stdio: ['ignore', 'pipe', 'ignore'],
+                windowsHide: true 
+            }).toString();
             const pids = [];
             for (const line of out.split(/\r?\n/)) {
                 const m = line.match(/^"([^"]+)","(\d+)"/);
@@ -52,7 +54,10 @@ function killStaleAdityaProcesses() {
             for (const pid of pids) {
                 if (parseInt(pid, 10) === process.pid) continue;
                 try {
-                    execSync(`taskkill /F /PID ${pid}`, { stdio: 'ignore' });
+                    execSync(`taskkill /F /PID ${pid}`, { 
+                        stdio: 'ignore',
+                        windowsHide: true 
+                    });
                     logLine(null, 'INFO', `Killed stale ${name} (PID ${pid})`);
                 } catch (_) {}
             }
