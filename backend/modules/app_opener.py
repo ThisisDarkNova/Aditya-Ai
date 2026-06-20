@@ -226,8 +226,9 @@ def media_control(action: str) -> str:
             return f"Toggled mute"
         else:
             return f"Unknown media command: {action}"
-    except Exception as e:
-        return f"Error executing media macrodef set_system_volume(percent_str: str) -> str:
+        return f"Error executing media macro: {e}"
+
+def set_system_volume(percent_str: str) -> str:
     """Sets system Master Volume natively on Windows, macOS, and Linux."""
     import sys
     import subprocess
@@ -276,7 +277,7 @@ def set_system_brightness(percent_str: str) -> str:
             subprocess.run(["brightnessctl", "set", f"{val}%"], check=True)
             return f"Linux screen brightness set to {val}%"
     except Exception as e:
-        return f"Error setting brightness: {e}"ness: {e}"
+        return f"Error setting brightness: {e}"
 
 def send_whatsapp_message(contact: str, message: str) -> str:
     """Sends a WhatsApp message using pywhatkit. Contact must include country code if possible."""
