@@ -227,45 +227,56 @@ def media_control(action: str) -> str:
         else:
             return f"Unknown media command: {action}"
     except Exception as e:
-        return f"Error executing media macro: {e}"
-
-def set_system_volume(percent_str: str) -> str:
-    """Sets system Master Volume via pycaw."""
+        return f"Error executing media macrodef set_system_volume(percent_str: str) -> str:
+    """Sets system Master Volume natively on Windows, macOS, and Linux."""
+    import sys
+    import subprocess
     try:
-        from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
-        from comtypes import CLSCTX_ALL
-        
-        print(f"[AI] Setting system volume to: {percent_str}")
         val_str = percent_str.replace('%', '').strip()
         val = int(val_str)
         val = max(0, min(100, val))
         
-        devices = AudioUtilities.GetSpeakers()
-        devices.EndpointVolume.SetMasterVolumeLevelScalar(val / 100.0, None)
-        
-        return f"System volume set to {val}%"
-    except ImportError:
-        return "pycaw/comtypes not installed. Run: pip install pycaw comtypes"
+        if sys.platform == "win32":
+            from pycaw.pycaw import AudioUtilities
+            devices = AudioUtilities.GetSpeakers()
+            devices.EndpointVolume.SetMasterVolumeLevelScalar(val / 100.0, None)
+            return f"System volume set to {val}%"
+        elif sys.platform == "darwin":
+            # macOS volume control
+            subprocess.run(["osascript", "-e", f"set volume output volume {val}"], check=True)
+            return f"macOS system volume set to {val}%"
+        else:
+            # Linux volume control using amixer
+            subprocess.run(["amixer", "-D", "pulse", "sset", "Master", f"{val}%"], check=True)
+            return f"Linux system volume set to {val}%"
     except Exception as e:
         error_msg = f"Error setting volume: {e}"
         print(f"[ERROR] {error_msg}")
         return error_msg
 
 def set_system_brightness(percent_str: str) -> str:
-    """Sets system brightness via screen_brightness_control."""
+    """Sets system brightness natively on Windows, macOS, and Linux."""
+    import sys
+    import subprocess
     try:
-        import screen_brightness_control as sbc
-        print(f"[AI] Setting system brightness to: {percent_str}")
         val_str = percent_str.replace('%', '').strip()
         val = int(val_str)
         val = max(0, min(100, val))
         
-        sbc.set_brightness(val)
-        return f"Screen brightness set to {val}%"
-    except ImportError:
-        return "screen-brightness-control not installed. Run pip install screen-brightness-control"
+        if sys.platform == "win32":
+            import screen_brightness_control as sbc
+            sbc.set_brightness(val)
+            return f"Screen brightness set to {val}%"
+        elif sys.platform == "darwin":
+            # macOS brightness control via osascript
+            subprocess.run(["osascript", "-e", f"tell application \"System Events\" to set value of variable \"brightness\" to {val / 100.0}"], check=True)
+            return f"macOS screen brightness set to {val}%"
+        else:
+            # Linux brightness control via brightnessctl
+            subprocess.run(["brightnessctl", "set", f"{val}%"], check=True)
+            return f"Linux screen brightness set to {val}%"
     except Exception as e:
-        return f"Error setting brightness: {e}"
+        return f"Error setting brightness: {e}"ness: {e}"
 
 def send_whatsapp_message(contact: str, message: str) -> str:
     """Sends a WhatsApp message using pywhatkit. Contact must include country code if possible."""
