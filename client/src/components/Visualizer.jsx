@@ -1,5 +1,11 @@
-import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+
+// Particle dots for Researching state
+const particles = Array.from({ length: 12 }, (_, i) => ({
+  angle: (i / 12) * 360,
+  delay: i * 0.08,
+  size: 3 + (i % 4)
+}));
 
 export default function Visualizer({ aiState, statusMessage }) {
   const orbControls = useAnimation();
@@ -62,13 +68,6 @@ export default function Visualizer({ aiState, statusMessage }) {
   };
 
   const config = getStateConfig();
-
-  // Particle dots for Researching state
-  const particles = Array.from({ length: 12 }, (_, i) => ({
-    angle: (i / 12) * 360,
-    delay: i * 0.08,
-    size: 3 + Math.random() * 4
-  }));
 
   return (
     <div style={{
