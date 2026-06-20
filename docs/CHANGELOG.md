@@ -13,4 +13,4 @@ All notable changes to this project will be documented in this file.
 - Electron desktop dashboard with custom NSIS premium setup installer assets.
 - Premium design visual assets including hologram core avatar and high-tech setup wallpaper.
 - GitHub Action CI/CD automated build workflow.
-- Community guidelines: CONTRIBUTING.md, CODE_OF_CONDUCT.md, pull_request_template.md, and issue templates.
+- Community guidelines: [.github/CONTRIBUTING.md](../.github/CONTRIBUTING.md), [.github/CODE_OF_CONDUCT.md](../.github/CODE_OF_CONDUCT.md), [.github/pull_request_template.md](../.github/pull_request_template.md), and issue templates.

@@ -8,7 +8,7 @@ Maintainers are individuals who have demonstrated dedication, skill, and alignme
 - Reviewing and merging pull requests.
 - Deciding project roadmap and release schedules.
 - Triaging issues and providing support.
-- Upholding and enforcing the [Code of Conduct](CODE_OF_CONDUCT.md).
+- Upholding and enforcing the [Code of Conduct](../.github/CODE_OF_CONDUCT.md).
 
 ## Decision Making Process
 
