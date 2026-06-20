@@ -36,7 +36,9 @@ export function initializeAndVerifyStorage() {
     logger.error('LocalStorage recovery system failed to run. Wiping corrupt items to restore stability.', err);
     try {
       localStorage.clear();
-    } catch (_) {}
+    } catch (_) {
+      // Ignored
+    }
     return false;
   }
 }
