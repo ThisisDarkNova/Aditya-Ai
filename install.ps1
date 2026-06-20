@@ -3,6 +3,10 @@
 
 $ErrorActionPreference = "Stop"
 
+# Force TLS 1.2 & TLS 1.3 protocol compliance for GitHub connections
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls13
+
+
 # Clear host and print a premium ASCII banner
 Clear-Host
 Write-Host "🌌 ADITYA — Sentient Cognitive Operating System" -ForegroundColor Cyan
