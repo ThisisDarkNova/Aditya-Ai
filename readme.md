@@ -3,6 +3,13 @@
 <div align="center">
   <img src="assets/banner.svg" width="100%" max-width="800" alt="ADITYA Animated Banner" />
   <p><em>An animated, high-performance, dark-glassmorphism AI companion & automation engine for Windows.</em></p>
+
+  [![CI Code Quality](https://img.shields.io/badge/CI--Code--Quality-passing-22c55e?style=flat-square&logo=github-actions&logoColor=white)](#)
+  [![Client Quality Checks](https://img.shields.io/badge/Client--Quality--Checks-passing-22c55e?style=flat-square&logo=github-actions&logoColor=white)](#)
+  [![Security Analysis](https://img.shields.io/badge/Security--Analysis-secured-22c55e?style=flat-square&logo=github-actions&logoColor=white)](#)
+  [![License](https://img.shields.io/github/license/DarkNova/aditya-os?style=flat-square&color=3382f6)](LICENSE)
+  [![Electron App Version](https://img.shields.io/badge/electron-v33.4.11-blue.svg?style=flat-square&logo=electron&logoColor=white)](client/package.json)
+  [![Python Backend Version](https://img.shields.io/badge/python-3.12-yellow.svg?style=flat-square&logo=python&logoColor=white)](backend/requirements.txt)
 </div>
 
 ---

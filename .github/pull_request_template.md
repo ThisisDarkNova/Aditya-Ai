@@ -1,14 +1,24 @@
-### 📝 Description
-Provide a summary of the changes, bugs fixed, or features introduced by this pull request.
+## 🌌 ADITYA Pull Request Template
 
-### 🧪 How Has This Been Tested?
-Please describe the manual verification or automated tests you ran to verify your changes:
-- [ ] PyInstaller Core Compilation tested
-- [ ] Electron client build verified
-- [ ] Real-time voice engine tested
+### 📝 Summary of Changes
+Describe the core updates, bug fixes, or enhancements introduced by this Pull Request.
 
-### ✔️ Checklist:
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] My changes generate no new warnings or crashes
+### 🎥 Visual Enhancements (Before & After)
+> [!NOTE]
+> If this PR modifies frontend templates or introduces new visual transitions/animations, please attach screenshots or screen recordings (MP4/GIF) below.
+
+| Before Modification | After Modification |
+| --- | --- |
+| *Attach visual/mockup here* | *Attach visual/mockup here* |
+
+### 🔬 Verification & Testing Performed
+Please detail the validation steps executed to guarantee stability:
+- [ ] Tested compiled PyInstaller Core Backend binary (`AdityaCore.exe`).
+- [ ] Verified React production bundle (`npm run build` runs cleanly).
+- [ ] Executed backend python test suite via Pytest.
+- [ ] Inspected visual animations and theme transitions locally.
+
+### ✔️ Development Quality Checklist
+- [ ] **Aesthetics & Micro-animations**: Follows the dark-glassmorphism theme guidelines and incorporates premium Framer Motion transitions.
+- [ ] **Continuous Integration**: The code passes local ESLint syntax checks and Python Ruff formatting.
+- [ ] **Zero-warnings Policy**: Changes generate no new console warnings, terminal exceptions, or thread leaks.

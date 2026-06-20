@@ -1,0 +1,50 @@
+name: 💡 Feature Suggestion
+description: Propose a premium animation, stability check, or capabilities upgrade for ADITYA.
+title: "[Feat]: "
+labels: ["enhancement", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement to ADITYA!
+        Please fill out this form to help us understand your vision.
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Feature Name
+      description: A concise title for the proposed feature.
+      placeholder: e.g., Animated Desktop Widgets for Streaks
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What area of the project does this feature improve?
+      options:
+        - "✨ Animations & Aesthetics (UI)"
+        - "🛠️ Core Automations & Skills (Backend)"
+        - "📈 Stability & Performance (CI/CD)"
+        - "📖 Documentation & Guides (Wiki)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Explain the problem this feature solves and why it is valuable.
+      placeholder: Describe the goal and potential workflows...
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Proposed Implementation & Mockups
+      description: If you have visual mockups, CSS snippets, or workflow graphs, describe or link them here.
+      placeholder: e.g., Hover effects using Framer Motion config...
+    validations:
+      required: false

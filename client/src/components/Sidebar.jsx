@@ -80,7 +80,11 @@ export default function Sidebar({ activePage, setActivePage, status }) {
           return (
             <motion.button
               key={id}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{
+                scale: 1.04,
+                backgroundColor: isActive ? 'var(--color-glass-hover)' : 'var(--color-glass)',
+                color: 'var(--color-text-primary)',
+              }}
               whileTap={{ scale: 0.97 }}
               onClick={() => setActivePage(id)}
               className="smooth-transition"
@@ -97,18 +101,6 @@ export default function Sidebar({ activePage, setActivePage, status }) {
                 color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)',
                 overflow: 'hidden',
                 boxShadow: isActive ? '0 0 15px rgba(91, 140, 255, 0.08)' : 'none'
-              }}
-              onMouseEnter={e => {
-                if (!isActive) {
-                  e.currentTarget.style.background = 'var(--color-glass)';
-                  e.currentTarget.style.color = 'var(--color-text-primary)';
-                }
-              }}
-              onMouseLeave={e => {
-                if (!isActive) {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = 'var(--color-text-secondary)';
-                }
               }}
             >
               {/* Active indicator bar */}

@@ -1,0 +1,31 @@
+name: Formatting Verification (Prettier)
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  prettier-check:
+    name: Verify Prettier Styling
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+        cache: 'npm'
+        cache-dependency-path: client/package-lock.json
+
+    - name: Install Dependencies
+      run: |
+        npm install -g prettier
+
+    - name: Run Formatting Check
+      run: |
+        prettier --check "client/src/**/*.{js,jsx,css}" "readme.md"

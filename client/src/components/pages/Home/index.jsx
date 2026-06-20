@@ -58,7 +58,9 @@ export default function Home({
         <motion.div variants={fadeUp} style={{ display: 'flex', gap: 8 }}>
           <span style={{ fontSize: 13, color: 'var(--color-text-muted)', alignSelf: 'center', marginRight: 8, fontWeight: 500 }}>Mode:</span>
           {PERSONAS.map(p => (
-            <button key={p.id} onClick={() => setActivePersona(p.id)} className="smooth-transition"
+            <motion.button key={p.id} onClick={() => setActivePersona(p.id)} className="smooth-transition"
+              whileHover={{ scale: 1.06, borderColor: 'var(--color-accent)' }}
+              whileTap={{ scale: 0.95 }}
               style={{
                 padding: '8px 20px', borderRadius: 20, cursor: 'pointer',
                 fontSize: 13, fontWeight: 600, border: '1px solid',
@@ -67,13 +69,13 @@ export default function Home({
                 borderColor:  activePersona === p.id ? 'var(--color-accent)'      : 'var(--color-border)',
               }}>
               {p.emoji} {p.label}
-            </button>
+            </motion.button>
           ))}
         </motion.div>
 
         {/* ── Focus + Daily Summary ── */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 20 }}>
-          <motion.div variants={fadeUp} className="glass-panel" style={{ padding: 24 }}>
+          <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.01 }} className="glass-panel" style={{ padding: 24 }}>
             <p style={{ fontSize: 12, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12, fontWeight: 600 }}>Current Focus</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <div style={{ width: 48, height: 48, borderRadius: 14, background: 'var(--color-accent-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -85,7 +87,7 @@ export default function Home({
               </div>
             </div>
           </motion.div>
-          <motion.div variants={fadeUp} className="glass-panel" style={{ padding: 24 }}>
+          <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.01 }} className="glass-panel" style={{ padding: 24 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
               <Sparkles size={16} color="var(--color-accent)" />
               <p style={{ fontSize: 12, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>Daily Summary</p>
@@ -114,10 +116,10 @@ export default function Home({
           { label: 'Cache Hit Rate',  value: realtimeStats?.cache?.hit_rate_pct != null ? `${Math.round(realtimeStats.cache.hit_rate_pct)}%` : '—',        color: '#3B82F6' },
           { label: 'API Calls Saved', value: realtimeStats?.api_calls_saved != null ? String(realtimeStats.api_calls_saved) : '—',                          color: '#A855F7' },
         ].map((s, i) => (
-          <div key={i} className="glass-panel" style={{ padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <motion.div key={i} whileHover={{ y: -3, scale: 1.02 }} className="glass-panel" style={{ padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
             <p style={{ fontSize: 11, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>{s.label}</p>
             <p style={{ fontSize: 22, fontWeight: 700, color: s.color }}>{s.value}</p>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
 

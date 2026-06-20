@@ -51,30 +51,62 @@ export default function StatusBar({ isConnected, aiState }) {
       }}
     >
       {/* AI State Pill */}
-      <div className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20 }}>
-        <div style={{ width: 8, height: 8, borderRadius: '50%', background: getAiStateColor(), boxShadow: `0 0 8px ${getAiStateColor()}` }} />
+      <motion.div 
+        whileHover={{ scale: 1.05, borderColor: getAiStateColor(), boxShadow: `0 0 15px ${getAiStateColor()}22` }}
+        className="glass-panel" 
+        style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20, cursor: 'default' }}
+      >
+        <div style={{ position: 'relative', width: 8, height: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {/* Pulsing glow ring */}
+          <motion.div
+            animate={{ scale: [1, 2.4, 1], opacity: [0.6, 0, 0.6] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            style={{
+              position: 'absolute',
+              width: 8,
+              height: 8,
+              borderRadius: '50%',
+              background: getAiStateColor(),
+              boxShadow: `0 0 6px ${getAiStateColor()}`,
+            }}
+          />
+          {/* Core dot */}
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: getAiStateColor(), zIndex: 2 }} />
+        </div>
         <span style={{ fontSize: 13, fontWeight: 500 }}>{getAiStateLabel()}</span>
-      </div>
+      </motion.div>
 
       {/* Voice State Pill */}
-      <div className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20 }}>
+      <motion.div 
+        whileHover={{ scale: 1.05, borderColor: 'var(--color-accent)', boxShadow: '0 0 15px var(--color-accent-glow)' }}
+        className="glass-panel" 
+        style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20, cursor: 'default' }}
+      >
         <Mic size={14} color="var(--color-text-secondary)" />
         <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary)' }}>Voice Ready</span>
-      </div>
+      </motion.div>
 
       {/* Connection State Pill */}
-      <div className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20 }}>
+      <motion.div 
+        whileHover={{ scale: 1.05, borderColor: isConnected ? 'var(--color-success)' : 'var(--color-danger)', boxShadow: `0 0 15px ${isConnected ? 'var(--color-success)' : 'var(--color-danger)'}22` }}
+        className="glass-panel" 
+        style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20, cursor: 'default' }}
+      >
         <Wifi size={14} color={isConnected ? 'var(--color-success)' : 'var(--color-danger)'} />
         <span style={{ fontSize: 13, fontWeight: 500, color: isConnected ? 'var(--color-success)' : 'var(--color-danger)' }}>
           {isConnected ? 'Online' : 'Offline'}
         </span>
-      </div>
+      </motion.div>
 
       {/* Time */}
-      <div className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20 }}>
+      <motion.div 
+        whileHover={{ scale: 1.05, borderColor: 'rgba(255, 255, 255, 0.2)' }}
+        className="glass-panel" 
+        style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 20, cursor: 'default' }}
+      >
         <Clock size={14} color="var(--color-text-secondary)" />
         <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary)' }}>{formatTime(time)}</span>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

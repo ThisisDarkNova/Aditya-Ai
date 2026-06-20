@@ -83,6 +83,8 @@ export default function Profile({ memory, saveAdityaMemoryEngine, chatHistory = 
           <div style={{ display: 'flex', alignItems: 'center', gap: 32, position: 'relative' }}>
             <motion.div
               whileHover={{ scale: 1.05, rotate: 5 }}
+              animate={{ scale: [1, 1.04, 1] }}
+              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
               style={{
                 width: 100, height: 100, borderRadius: '50%',
                 background: 'linear-gradient(135deg, var(--color-accent), #8B5CF6)',
@@ -93,7 +95,7 @@ export default function Profile({ memory, saveAdityaMemoryEngine, chatHistory = 
             >
               <span style={{ fontSize: 42, fontWeight: 700, color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>{initial}</span>
             </motion.div>
-
+ 
             <div style={{ flex: 1 }}>
               <h1 style={{ fontSize: 30, fontWeight: 700, marginBottom: 4, letterSpacing: '-0.5px' }}>{username}</h1>
               <p style={{ fontSize: 15, color: 'var(--color-text-secondary)', marginBottom: 20 }}>
@@ -118,10 +120,11 @@ export default function Profile({ memory, saveAdityaMemoryEngine, chatHistory = 
             </div>
           </div>
         </motion.div>
-
+ 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
           {stats.map((s, i) => (
             <motion.div key={i} variants={fadeUp} className="glass-panel"
+              whileHover={{ y: -4, scale: 1.02 }}
               style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div style={{
                 width: 40, height: 40, borderRadius: 12,
@@ -137,7 +140,7 @@ export default function Profile({ memory, saveAdityaMemoryEngine, chatHistory = 
             </motion.div>
           ))}
         </div>
-
+ 
         <motion.div variants={fadeUp} className="glass-panel" style={{ padding: 28 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
             <TrendingUp size={18} color="var(--color-accent)" />
@@ -146,7 +149,7 @@ export default function Profile({ memory, saveAdityaMemoryEngine, chatHistory = 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
             {personaProgress.map((item, i) => (
               <div key={i}>
-                <div style={{ display: 'flex', alignItems: 'center', justifycontent: 'space-between', marginBottom: 10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <div style={{ width: 32, height: 32, borderRadius: 10, background: `${item.color}20`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <item.icon size={16} color={item.color} />

@@ -1,13 +1,13 @@
-name: Python Code Quality
+name: Python Code Quality & Testing
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, dev ]
   pull_request:
     branches: [ main, master ]
 
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +19,18 @@ jobs:
       with:
         python-version: '3.12'
 
-    - name: Verify Python Syntax
+    - name: Install System Dependencies
       run: |
-        python -m py_compile backend/main.py backend/ui_server.py
+        sudo apt-get update
+        sudo apt-get install -y portaudio19-dev build-essential
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt -r backend/requirements-dev.txt
+
+    - name: Run Pytest Tests
+      run: |
+        cd backend
+        python -m pytest --cov=core --cov=modules tests/
+
