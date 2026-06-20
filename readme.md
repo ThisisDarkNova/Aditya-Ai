@@ -123,5 +123,13 @@ We have built a premium, production-ready environment configured for automatic v
 ---
 
 ## 📦 Single Executable Setup
+
+### ⚡ Quick Install (PowerShell One-Liner)
+If your repository is **public**, you can run this command in a PowerShell terminal to automatically download and launch the installer:
+```powershell
+irm "https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/install.ps1" | iex
+```
+
+### 💾 Manual Download
 The compiled, production-ready setup installer is located at:
 *   **Setup Binary**: [ADITYA Setup 1.0.0.exe](file:///c:/Users/DarkNova/Downloads/Aditya-Ai-1.0.0/client/release/ADITYA%20Setup%201.0.0.exe)
