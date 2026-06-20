@@ -141,4 +141,25 @@ If your repository is **public**, you can run these commands to automatically do
 
 ### 💾 Manual Download
 The compiled, production-ready setup installer is located at:
-*   **Setup Binary**: [ADITYA Setup 1.0.0.exe](file:///c:/Users/DarkNova/Downloads/Aditya-Ai-1.0.0/client/release/ADITYA%20Setup%201.0.0.exe)
+*   **Setup Binary**: [ADITYA Setup 1.0.0.exe](file:///c:/Users/DarkNova/Downloads/Aditya-Ai-1.0.0/client/release/ADITYA%20Setup%201.0.0.exe)
+
+---
+
+## 📱 Cross-Device & Ecosystem Deployment
+
+ADITYA can be deployed across a variety of hardware targets using hybrid wrapping:
+
+### 1. Phones & Tablets (Android / iOS)
+*   **Android (Phone/Tablet)**: Package the React client UI as a hybrid app using **Capacitor** or host the dashboard as a Progressive Web App (PWA). Run the python daemon locally using Termux/Pyodide or connect over WebSocket pools.
+*   **iOS (iPhone/iPad)**: Bundle the frontend build directory into a native iOS container. iOS blocks local Python execution, requiring the client to connect to your workstation backend over local network sockets.
+
+### 2. Smart TVs (Android TV / Tizen / WebOS)
+*   **Android TV / Fire TV**: Package the dashboard into an `.apk` TV build. The TV visualizes the cognitive orb and controls media playback or system states.
+*   **Samsung (Tizen) & LG (WebOS)**: Host the client page locally and direct the built-in browser to the target IP address.
+
+### 3. Game Consoles (Xbox / PlayStation / Nintendo Switch)
+*   **Xbox (One / Series X/S)**: Compile the React client dashboard as a Universal Windows Platform (UWP) package to control system states and inspect telemetry parameters.
+*   **PlayStation / Nintendo Switch**: Load the interactive panel by directing the console's internal web browser to the ADITYA host server.
+
+### 4. Smartwatches (WearOS / watchOS)
+*   **Wearables**: Connect watch interfaces directly to backend API routes. Use the watch mic to trigger commands (such as locking systems or setting volumes) from your wrist.
