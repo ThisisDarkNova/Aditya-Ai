@@ -1,5 +1,5 @@
 # ADITYA OS - Sentient Cognitive Operating System Installer
-# Usage: irm "https://raw.githubusercontent.com/amdarknova-dev/Aditya-Ai/main/install.ps1" | iex
+# Usage: irm "https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/install.ps1" | iex
 
 $ErrorActionPreference = "Stop"
 
@@ -10,7 +10,7 @@ Write-Host "==============================================" -ForegroundColor Dar
 Write-Host "Initializing secure installation pipeline..." -ForegroundColor Gray
 
 # Define repository specific URLs
-$repoOwner = "amdarknova-dev"
+$repoOwner = "ThisisDarkNova"
 $repoName = "Aditya-Ai"
 $releaseVersion = "v1.0.0"
 $installerName = "ADITYA.Setup.1.0.0.exe"
