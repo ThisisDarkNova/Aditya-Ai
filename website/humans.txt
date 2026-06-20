@@ -1,0 +1,9 @@
+/* humans.txt */
+/* Your info */
+Author: ThisisDarkNova
+Github: https://github.com/ThisisDarkNova
+
+/* Site info */
+Standards: HTML5, CSS3
+Components: Vanilla JS
+Software: Antigravity IDE

@@ -1,0 +1,19 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xl);
+    transition: all var(--duration) var(--ease-out);
+    font-weight: 500;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(16px);
+}
+
+.card:hover {
+    border-color: var(--border-hover);
+}
