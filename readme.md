@@ -124,4 +124,4 @@ We have built a premium, production-ready environment configured for automatic v
 
 ## 📦 Single Executable Setup
 The compiled, production-ready setup installer is located at:
-*   **Setup Binary**: [ADITYA Setup 1.0.0.exe](file:///c:/Users/DarkNova/Downloads/Aether-1.0.0/client/release/ADITYA%20Setup%201.0.0.exe)
+*   **Setup Binary**: [ADITYA Setup 1.0.0.exe](file:///c:/Users/DarkNova/Downloads/Aditya-Ai-1.0.0/client/release/ADITYA%20Setup%201.0.0.exe)

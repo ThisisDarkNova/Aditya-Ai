@@ -1,4 +1,4 @@
-# Multi-stage Dockerfile for Aether-1.0.0 testing and execution
+# Multi-stage Dockerfile for Aditya-Ai-1.0.0 testing and execution
 FROM python:3.11-slim AS backend-builder
 
 WORKDIR /app
