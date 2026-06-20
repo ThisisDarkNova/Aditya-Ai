@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="assets/banner.svg" width="100%" max-width="800" alt="ADITYA Animated Banner" />
-  <p><em>An animated, high-performance, dark-glassmorphism AI companion & automation engine for Windows.</em></p>
+  <p><em>An animated, high-performance, dark-glassmorphism AI companion & automation engine for Windows, macOS, and Linux.</em></p>
 
   [![CI Code Quality](https://img.shields.io/badge/CI--Code--Quality-passing-22c55e?style=flat-square&logo=github-actions&logoColor=white)](#)
   [![Client Quality Checks](https://img.shields.io/badge/Client--Quality--Checks-passing-22c55e?style=flat-square&logo=github-actions&logoColor=white)](#)
@@ -64,9 +64,11 @@ Aditya has direct local access to interact with your computer:
 ### 1. Prerequisites
 1.  **Python 3.11** or **3.12** (Ensure `python` is added to your Environment PATH).
 2.  **Node.js (LTS)** (Required to build the React dashboard).
-3.  **Tesseract OCR**:
-    *   Download from the [Tesseract GitHub Repository](https://github.com/UB-Mannheim/tesseract/wiki).
-    *   Install to standard location: `C:\Program Files\Tesseract-OCR\tesseract.exe`.
+3.  **Tesseract OCR** (Required for OCR screen interactions).
+4.  **Cross-Platform OS Compatibility**:
+    *   **Windows**: 10 or 11 (Supports ia32, x64, and arm64).
+    *   **macOS**: macOS 11+ Big Sur (Supports Intel & Apple Silicon M1/M2/M3).
+    *   **Linux**: Ubuntu/Debian/Fedora (Supports x64 and arm64).
 
 ### 2. Python Environment Setup
 Open a PowerShell terminal in the root directory and install dependencies:
