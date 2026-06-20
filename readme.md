@@ -162,4 +162,20 @@ ADITYA can be deployed across a variety of hardware targets using hybrid wrappin
 *   **PlayStation / Nintendo Switch**: Load the interactive panel by directing the console's internal web browser to the ADITYA host server.
 
 ### 4. Smartwatches (WearOS / watchOS)
-*   **Wearables**: Connect watch interfaces directly to backend API routes. Use the watch mic to trigger commands (such as locking systems or setting volumes) from your wrist.
+*   **Wearables**: Connect watch interfaces directly to backend API routes. Use the watch mic to trigger commands (such as locking systems or setting volumes) from your wrist.
+
+---
+
+## 🚀 How to Run Packages (.dmg, .pkg, .apk)
+
+Once compiled via the GitHub Actions runner, you can download and install any platform package using these steps:
+
+### 🍏 Running on macOS (.dmg / .pkg)
+1. **DMG Disk Image**: Double-click the downloaded `.dmg` package and drag the **ADITYA** icon into your **Applications** folder.
+2. **PKG Installer**: Double-click the `.pkg` file and follow the setup wizard instructions.
+3. **Bypass Gatekeeper**: If macOS shows an "unidentified developer" warning on startup, right-click (or Control-click) the application icon, select **Open**, and click confirm.
+
+### 🤖 Running on Android (.apk)
+1. **Enable Unknown Sources**: Go to **Settings > Security** (or Settings > Apps > Special Access) and allow installations from unknown sources for your browser or file manager.
+2. **Install**: Copy or download the `app-debug.apk` file onto your device, open it using your File Manager, and click **Install**.
+3. **Connect**: Open the app, and configure it to point to your desktop PC's local IP address (`ws://<pc-ip>:<port>`) to control your computer dashboard.
