@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADITYA — Sentient Cognitive Operating System</title>
+    <meta name="description" content="ADITYA is a sentient AI companion and automation engine for Windows — featuring glassmorphism UI, zero-latency conversation, and active OS control.">
+    <meta name="keywords" content="ADITYA, AI, Sentient OS, Windows AI, Automation, DarkNova">
+    <meta name="author" content="ThisisDarkNova">
+    <meta name="theme-color" content="#0a0a0b">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════════ PARTICLE CANVAS ═══════════════ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <div class="logo-pulse"></div>
+                <span class="logo-text">ADITYA</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#preview" class="nav-link">Preview</a>
+                <a href="#install" class="nav-link">Install</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/ThisisDarkNova/Aditya-Ai" class="nav-github" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#features" class="mobile-link">Features</a>
+            <a href="#architecture" class="mobile-link">Architecture</a>
+            <a href="#preview" class="mobile-link">Preview</a>
+            <a href="#install" class="mobile-link">Install</a>
+            <a href="https://github.com/ThisisDarkNova/Aditya-Ai" class="mobile-link" target="_blank">GitHub →</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <header class="hero" id="hero">
+        <div class="hero-glow hero-glow--1"></div>
+        <div class="hero-glow hero-glow--2"></div>
+
+        <div class="hero-inner">
+            <div class="hero-badge anim-fade-up">
+                <span class="badge-dot"></span>
+                v1.0.0 — Stable Release
+            </div>
+
+            <h1 class="hero-title anim-fade-up" style="--delay: 0.1s;">
+                The Sentient<br>
+                <span class="gradient-text">Operating System.</span>
+            </h1>
+
+            <p class="hero-subtitle anim-fade-up" style="--delay: 0.2s;">
+                An animated, high‑performance AI companion and automation engine built natively for Windows. Dark glassmorphism UI, zero‑latency conversation, and active OS capabilities.
+            </p>
+
+            <div class="hero-ctas anim-fade-up" style="--delay: 0.3s;">
+                <a href="https://github.com/ThisisDarkNova/Aditya-Ai/releases/download/v1.0.0/ADITYA%20Setup%201.0.0.exe" class="btn-primary" id="download-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download for Windows
+                </a>
+                <a href="https://github.com/ThisisDarkNova/Aditya-Ai" class="btn-ghost" target="_blank">
+                    View on GitHub
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+            </div>
+
+            <!-- Orb -->
+            <div class="hero-orb anim-fade-up" style="--delay: 0.4s;">
+                <div class="orb">
+                    <div class="orb-core"></div>
+                    <div class="orb-ring orb-ring--1"></div>
+                    <div class="orb-ring orb-ring--2"></div>
+                    <div class="orb-ring orb-ring--3"></div>
+                    <div class="orb-shimmer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator anim-fade-up" style="--delay: 0.6s;">
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ═══════════════ FEATURES ═══════════════ -->
+    <section class="section section--features" id="features">
+        <div class="section-inner">
+            <div class="section-header anim-on-scroll">
+                <span class="section-label">Capabilities</span>
+                <h2 class="section-title">Active OS<br>Intelligence.</h2>
+                <p class="section-desc">ADITYA has direct, secure access to interact with your machine, automate workflows, and optimise hardware in real time.</p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card anim-on-scroll" style="--delay: 0s;">
+                    <div class="feature-icon feature-icon--emerald">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>OS Control</h3>
+                    <p>Manage volume, brightness, sleep, hibernate, or lock your PC — all via natural voice commands.</p>
+                </article>
+
+                <article class="feature-card anim-on-scroll" style="--delay: 0.08s;">
+                    <div class="feature-icon feature-icon--violet">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                    </div>
+                    <h3>Physical Automation</h3>
+                    <p>Trigger clicks, cursor movement, execute custom hotkeys, or type text using detached automation scripts.</p>
+                </article>
+
+                <article class="feature-card anim-on-scroll" style="--delay: 0.16s;">
+                    <div class="feature-icon feature-icon--blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3>OCR Targeting</h3>
+                    <p>Read elements on your screen using Tesseract OCR, processing text with low-contrast filters for precise interaction.</p>
+                </article>
+
+                <article class="feature-card anim-on-scroll" style="--delay: 0.24s;">
+                    <div class="feature-icon feature-icon--amber">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Game Booster</h3>
+                    <p>Suspend search indexers, raise active task priority, and get live system telemetry tracking for peak performance.</p>
+                </article>
+
+                <article class="feature-card anim-on-scroll" style="--delay: 0.32s;">
+                    <div class="feature-icon feature-icon--rose">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                    </div>
+                    <h3>Voice Engine</h3>
+                    <p>Zero-latency voice recognition with multi-speaker diarization and context-aware conversational AI responses.</p>
+                </article>
+
+                <article class="feature-card anim-on-scroll" style="--delay: 0.4s;">
+                    <div class="feature-icon feature-icon--cyan">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Plugin System</h3>
+                    <p>Modular skill-based architecture. Extend ADITYA with custom Python plugins, scripts, and automation modules.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ARCHITECTURE ═══════════════ -->
+    <section class="section section--architecture" id="architecture">
+        <div class="section-inner">
+            <div class="section-header anim-on-scroll">
+                <span class="section-label">Design</span>
+                <h2 class="section-title">Decoupled<br>Architecture.</h2>
+                <p class="section-desc">ADITYA separates concerns into independent, hot-swappable modules that communicate through a unified event bus.</p>
+            </div>
+
+            <div class="arch-grid">
+                <div class="arch-card anim-on-scroll" style="--delay: 0s;">
+                    <div class="arch-number">01</div>
+                    <h3>Electron Client</h3>
+                    <p>Premium glassmorphism UI built with HTML/CSS/JS, featuring real-time particle canvases and custom widget panels.</p>
+                </div>
+                <div class="arch-card anim-on-scroll" style="--delay: 0.1s;">
+                    <div class="arch-number">02</div>
+                    <h3>Python Backend</h3>
+                    <p>Flask-based API server handling AI inference, system calls, hardware monitoring, and voice-to-text pipelines.</p>
+                </div>
+                <div class="arch-card anim-on-scroll" style="--delay: 0.2s;">
+                    <div class="arch-number">03</div>
+                    <h3>Skills Engine</h3>
+                    <p>Modular plugin loader that discovers and activates Python automation scripts at runtime with hot-reloading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ PREVIEW ═══════════════ -->
+    <section class="section section--preview" id="preview">
+        <div class="section-inner">
+            <div class="section-header anim-on-scroll">
+                <span class="section-label">Interface</span>
+                <h2 class="section-title">Premium Visual<br>Dashboard.</h2>
+                <p class="section-desc">A stunning dark UI featuring real glassmorphism effects, particle canvases, and custom interactive widgets.</p>
+            </div>
+
+            <div class="preview-showcase anim-on-scroll" style="--delay: 0.1s;">
+                <div class="preview-tabs">
+                    <button class="preview-tab active" data-tab="0">Mission Control</button>
+                    <button class="preview-tab" data-tab="1">Settings Panel</button>
+                </div>
+                <div class="preview-frame">
+                    <div class="preview-frame-header">
+                        <div class="frame-dots">
+                            <span class="dot dot--red"></span>
+                            <span class="dot dot--yellow"></span>
+                            <span class="dot dot--green"></span>
+                        </div>
+                        <span class="frame-title">ADITYA — v1.0.0</span>
+                    </div>
+                    <div class="preview-frame-body">
+                        <img src="../assets/premium_home_dashboard.png" alt="ADITYA Mission Control Dashboard" class="preview-img active" data-index="0">
+                        <img src="../assets/premium_settings_panel.png" alt="ADITYA Settings Panel" class="preview-img" data-index="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ INSTALL ═══════════════ -->
+    <section class="section section--install" id="install">
+        <div class="section-inner">
+            <div class="section-header anim-on-scroll">
+                <span class="section-label">Get Started</span>
+                <h2 class="section-title">Install in<br>seconds.</h2>
+                <p class="section-desc">One command. No dependencies. Runs on any 64-bit Windows machine.</p>
+            </div>
+
+            <div class="install-terminals anim-on-scroll" style="--delay: 0.1s;">
+                <!-- PowerShell -->
+                <div class="terminal">
+                    <div class="terminal-chrome">
+                        <div class="terminal-dots-row">
+                            <span class="tdot tdot--r"></span>
+                            <span class="tdot tdot--y"></span>
+                            <span class="tdot tdot--g"></span>
+                        </div>
+                        <span class="terminal-label">PowerShell</span>
+                    </div>
+                    <div class="terminal-body">
+                        <span class="t-prompt">PS &gt;</span>
+                        <code class="t-cmd" id="ps-cmd">irm "https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/install.ps1" | iex</code>
+                        <button class="t-copy" data-target="ps-cmd" aria-label="Copy command">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CMD -->
+                <div class="terminal">
+                    <div class="terminal-chrome">
+                        <div class="terminal-dots-row">
+                            <span class="tdot tdot--r"></span>
+                            <span class="tdot tdot--y"></span>
+                            <span class="tdot tdot--g"></span>
+                        </div>
+                        <span class="terminal-label">Command Prompt</span>
+                    </div>
+                    <div class="terminal-body">
+                        <span class="t-prompt">C:\&gt;</span>
+                        <code class="t-cmd" id="cmd-cmd">powershell -ExecutionPolicy Bypass -Command "irm 'https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/install.ps1' | iex"</code>
+                        <button class="t-copy" data-target="cmd-cmd" aria-label="Copy command">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="install-cta anim-on-scroll" style="--delay: 0.2s;">
+                <a href="https://github.com/ThisisDarkNova/Aditya-Ai/releases/download/v1.0.0/ADITYA%20Setup%201.0.0.exe" class="btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download ADITYA Setup 1.0.0.exe
+                </a>
+                <span class="install-note">Windows 10/11 · 64-bit · ~120 MB</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TECH STACK ═══════════════ -->
+    <section class="section section--stack">
+        <div class="section-inner">
+            <div class="section-header anim-on-scroll">
+                <span class="section-label">Built With</span>
+                <h2 class="section-title">Technology Stack.</h2>
+            </div>
+
+            <div class="stack-grid anim-on-scroll" style="--delay: 0.1s;">
+                <div class="stack-item">
+                    <span class="stack-name">Electron</span>
+                    <span class="stack-role">Client Shell</span>
+                </div>
+                <div class="stack-item">
+                    <span class="stack-name">Python</span>
+                    <span class="stack-role">Backend Core</span>
+                </div>
+                <div class="stack-item">
+                    <span class="stack-name">Flask</span>
+                    <span class="stack-role">API Server</span>
+                </div>
+                <div class="stack-item">
+                    <span class="stack-name">Gemini</span>
+                    <span class="stack-role">AI Engine</span>
+                </div>
+                <div class="stack-item">
+                    <span class="stack-name">Tesseract</span>
+                    <span class="stack-role">OCR Engine</span>
+                </div>
+                <div class="stack-item">
+                    <span class="stack-name">PyAutoGUI</span>
+                    <span class="stack-role">Automation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-pulse"></div>
+                        <span>ADITYA</span>
+                    </div>
+                    <p class="footer-tagline">Sentient Cognitive Operating System</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#architecture">Architecture</a>
+                        <a href="#preview">Preview</a>
+                        <a href="#install">Install</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/ThisisDarkNova/Aditya-Ai" target="_blank">GitHub</a>
+                        <a href="https://github.com/ThisisDarkNova/Aditya-Ai/releases" target="_blank">Releases</a>
+                        <a href="https://github.com/ThisisDarkNova/Aditya-Ai/blob/main/LICENSE" target="_blank">License</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ADITYA. MIT License.</p>
+                <p>Created by <a href="https://github.com/ThisisDarkNova" target="_blank">ThisisDarkNova</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
