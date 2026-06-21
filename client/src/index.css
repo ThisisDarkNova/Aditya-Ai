@@ -6,15 +6,15 @@
   --font-serif: "Space Grotesk", "SF Pro Rounded", sans-serif;
   --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, monospace;
 
-  /* New ADITYA OS 2026 Palette */
-  --color-background: #08090D;
-  --color-surface: #11131A;
-  --color-glass: rgba(255, 255, 255, 0.05);
-  --color-glass-hover: rgba(255, 255, 255, 0.1);
-  --color-border: rgba(255, 255, 255, 0.08);
+  /* Obsidian Black & Sapphire Blue Strict Palette */
+  --color-background: #0A0A0A;
+  --color-surface: #111111;
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-hover: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.1);
   
-  --color-accent: #5B8CFF;
-  --color-accent-glow: rgba(91, 140, 255, 0.3);
+  --color-accent: #0F52BA;
+  --color-accent-glow: rgba(15, 82, 186, 0.4);
   
   --color-success: #22C55E;
   --color-warning: #F59E0B;
@@ -26,27 +26,11 @@
 }
 
 /* ===== Dynamic Persona Themes ===== */
-:root, .theme-default {
-  --color-accent: #5B8CFF;
-  --color-accent-glow: rgba(91, 140, 255, 0.3);
-}
-
-.theme-student {
-  --color-accent: #3B82F6;
-  --color-accent-glow: rgba(59, 130, 246, 0.3);
-  --color-background: #060b19;
-}
-
-.theme-gamer {
-  --color-accent: #A855F7;
-  --color-accent-glow: rgba(168, 85, 247, 0.3);
-  --color-background: #0a0514;
-}
-
-.theme-streamer {
-  --color-accent: #F59E0B;
-  --color-accent-glow: rgba(245, 158, 11, 0.3);
-  --color-background: #140d04;
+/* Overridden to enforce Strict Sapphire Blue per user request */
+:root, .theme-default, .theme-student, .theme-gamer, .theme-streamer {
+  --color-accent: #0F52BA;
+  --color-accent-glow: rgba(15, 82, 186, 0.4);
+  --color-background: #0A0A0A;
 }
 
 /* ===== Base Reset ===== */
