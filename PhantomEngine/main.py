@@ -2421,6 +2421,32 @@ if __name__ == "__main__":
         # Start Compute Reserve Monitor
         threading.Thread(target=compute_reserve_monitor, daemon=True, name="ComputeReserve").start()
         
+        # Launch Aditya sub-engines (Silent Butler, Chauffeur, Morning Briefing)
+        try:
+            from TheDailyHub.FileOrganizer import TheSilentButler
+            butler = TheSilentButler()
+            butler.start()
+        except Exception as e:
+            print(f"[ERROR] Failed to start The Silent Butler: {e}")
+
+        try:
+            from V12Cylinders.TheChauffeur import TheChauffeur
+            driver = TheChauffeur()
+            if driver.client:
+                threading.Thread(target=driver.monitor_stream, daemon=True, name="TheChauffeur").start()
+        except Exception as e:
+            print(f"[ERROR] Failed to start The Chauffeur: {e}")
+
+        try:
+            from TheDailyHub.MorningBriefing import MorningBriefing
+            def run_morning_briefing():
+                briefing = MorningBriefing()
+                text = briefing.generate_briefing()
+                print(f"\n================ ADITYA MORNING BRIEFING ================\n{text}\n=========================================================\n", flush=True)
+            threading.Thread(target=run_morning_briefing, daemon=True, name="MorningBriefing").start()
+        except Exception as e:
+            print(f"[ERROR] Failed to run Morning Briefing: {e}")
+
         while True:
             try:
                 _run_async_main()
