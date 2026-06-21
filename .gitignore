@@ -1,65 +1,29 @@
-# Python cache and byte-code
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
-
-# Node dependencies and build outputs
+# Node dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-client/node_modules/
-client/dist/
-client/release/
 
-# Logs
-backend/logs/
-*.log
-backend/data/logs/
+# Production Builds
+Release/
+dist/
+out/
+.next/
 
-# Databases and dynamic state
-*.db
-*.sqlite3
-backend/data/autonomous_log.json
-backend/data/context_store.json
-backend/data/daily_requests.json
-backend/data/emotion_history.json
-backend/data/ethical_log.json
-backend/data/knowledge_base.json
-backend/data/knowledge_graph.json
-backend/data/personalization.json
-backend/data/predictive_patterns.json
-backend/data/simulations.json
-backend/data/sync_state.json
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
 
-# Environment configurations
+# Environment Variables
 .env
-.env.*
-!.env.example
+.env.local
+.env.*.local
 
-# IDE settings
-.vscode/
-.idea/
-*.swp
-*.swo
-*.suo
-
-# PyInstaller build files and outputs
-backend/build/
-backend/dist/
-*.spec
-
-# OS files
+# OS generated files
 .DS_Store
 Thumbs.db
- 
-*.exe
-

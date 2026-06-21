@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  --color-midnight: #000000;
+  --color-midnight-light: #0B0C10;
+  --color-silver: #C5C6C7;
+  --color-accent: #1F2833;
+  --color-highlight: #66FCF1;
+}
+
+/* Strict Midnight Paradigm */
+:root {
+  --background: #000000;
+  --foreground: #C5C6C7;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Lenis Smooth Scroll Recommended Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(31, 40, 51, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 198, 199, 0.1);
+  border-radius: 1rem;
+}
+
+/* Subtle Apple Scaling Hover */
+.apple-hover {
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.apple-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}

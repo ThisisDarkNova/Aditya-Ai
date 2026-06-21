@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Workspace Dependencies",
+      "type": "shell",
+      "command": "npm install && cd client && npm install",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Client (Production)",
+      "type": "shell",
+      "command": "npm run build:electron",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Tests",
+      "type": "shell",
+      "command": "cd backend && ..\\.venv\\Scripts\\python.exe -m unittest discover tests",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

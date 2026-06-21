@@ -1,0 +1,50 @@
+{
+  "name": "aditya-ghost-writer",
+  "displayName": "Aditya: The Ghost Writer",
+  "description": "Ultra-luxury AI integration for VS Code powered by PhantomEngine.",
+  "version": "1.0.0",
+  "publisher": "DarkNova",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Programming Languages"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aditya.summonGhostWriter",
+        "title": "Aditya: Summon Ghost Writer"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "aditya.summonGhostWriter",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "ws": "^8.17.0"
+  }
+}
