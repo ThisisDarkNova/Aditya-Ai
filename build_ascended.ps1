@@ -16,35 +16,35 @@ New-Item -ItemType Directory -Force -Path $ReleaseDir | Out-Null
 # 2. Build StreamWidgets (OBS Overlays)
 Write-Host "`n[1/4] Building StreamWidgets (Vite)..." -ForegroundColor Yellow
 Set-Location "$MonorepoRoot\StreamWidgets"
-# Note: npm install disabled for speed in this architectural demo
-# npm install --silent
-# npm run build
+npm install --silent
+npm run build
 New-Item -ItemType Directory -Force -Path "$ReleaseDir\StreamWidgets_Build" | Out-Null
+Copy-Item -Path "$MonorepoRoot\StreamWidgets\dist\*" -Destination "$ReleaseDir\StreamWidgets_Build" -Recurse -Force
 Write-Host "✅ StreamWidgets compiled successfully." -ForegroundColor Green
 
 # 3. Build VS Code Extension
 Write-Host "`n[2/4] Building VS Code Extension (TypeScript)..." -ForegroundColor Yellow
 Set-Location "$MonorepoRoot\VSCodeExtension"
-# npm install --silent
-# npm run compile
-# vsce package -o "$ReleaseDir\aditya-ghost-writer-1.0.0.vsix"
-New-Item -ItemType File -Force -Path "$ReleaseDir\aditya-ghost-writer-1.0.0.vsix" | Out-Null
+npm install --silent
+npm run compile
+npx -y @vscode/vsce package -o "$ReleaseDir\aditya-ghost-writer-1.0.0.vsix" --no-dependencies
 Write-Host "✅ VS Code Extension packaged successfully." -ForegroundColor Green
 
 # 4. Build PhantomEngine (Python)
-Write-Host "`n[3/4] Compiling PhantomEngine Daemons (PyInstaller)..." -ForegroundColor Yellow
+Write-Host "`n[3/4] Compiling PhantomEngine Core and Daemons (PyInstaller)..." -ForegroundColor Yellow
 Set-Location "$MonorepoRoot\PhantomEngine"
-# pyinstaller --onefile --noconsole TheDailyHub\MorningBriefing.py --distpath "$ReleaseDir\Daemons"
-New-Item -ItemType Directory -Force -Path "$ReleaseDir\Daemons" | Out-Null
-New-Item -ItemType File -Force -Path "$ReleaseDir\Daemons\MorningBriefing.exe" | Out-Null
-New-Item -ItemType File -Force -Path "$ReleaseDir\Daemons\TheChauffeur.exe" | Out-Null
-Write-Host "✅ Python Daemons compiled successfully." -ForegroundColor Green
+# Use virtual environment python to run PyInstaller
+& .venv\Scripts\pyinstaller --onefile --noconsole TheDailyHub\MorningBriefing.py --distpath "$ReleaseDir\Daemons" --clean
+& .venv\Scripts\pyinstaller --onefile --noconsole V12Cylinders\TheChauffeur.py --distpath "$ReleaseDir\Daemons" --clean
+& .venv\Scripts\pyinstaller AdityaCore.spec --distpath "$ReleaseDir" --clean
+Write-Host "✅ Python Core & Daemons compiled successfully." -ForegroundColor Green
 
 # 5. Build AdityaWeb (Next.js)
 Write-Host "`n[4/4] Building Web Portal (Next.js)..." -ForegroundColor Yellow
 Set-Location "$MonorepoRoot\AdityaWeb"
-# npm run build
+npm run build
 New-Item -ItemType Directory -Force -Path "$ReleaseDir\AdityaWeb_Build" | Out-Null
+Copy-Item -Path "$MonorepoRoot\AdityaWeb\.next\*" -Destination "$ReleaseDir\AdityaWeb_Build" -Recurse -Force
 Write-Host "✅ Next.js Production Build complete." -ForegroundColor Green
 
 # 6. Finalization

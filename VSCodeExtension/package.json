@@ -26,7 +26,17 @@
         "mac": "cmd+shift+a",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Aditya Configuration",
+      "properties": {
+        "aditya.geminiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "The API Key used by Aditya for Gemini AI operations."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
