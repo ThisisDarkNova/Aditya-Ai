@@ -1,0 +1,3 @@
+@echo off
+echo Running deploy-vercel...
+pause

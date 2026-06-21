@@ -1,0 +1,3 @@
+@echo off
+echo Running verify_install...
+pause
