@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "publisher": "DarkNova",
   "icon": "logo.png",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.90.0"
   },
