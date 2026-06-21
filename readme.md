@@ -137,8 +137,30 @@ If your repository is **public**, you can run these commands to automatically do
     ```cmd
     powershell -Command "irm 'https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/install.ps1' | iex"
     ```
-
-
+*   **Using Winget**:
+    ```powershell
+    winget install Aditya.AI
+    ```
+*   **Using Scoop**:
+    ```powershell
+    scoop install aditya-ai
+    ```
+*   **Using Chocolatey**:
+    ```powershell
+    choco install aditya-ai
+    ```
+*   **Using npm**:
+    ```bash
+    npm install -g aditya-ai
+    ```
+*   **Using Yarn**:
+    ```bash
+    yarn global add aditya-ai
+    ```
+*   **Using pnpm**:
+    ```bash
+    pnpm add -g aditya-ai
+    ```
 ### 💾 Manual Download
 The compiled, production-ready setup installer is located at:
 *   **Setup Binary**: [ADITYA Setup 1.0.0.exe](file:///c:/Users/DarkNova/Downloads/Aditya-Ai-1.0.0/client/release/ADITYA%20Setup%201.0.0.exe)
