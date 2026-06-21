@@ -50,13 +50,13 @@ export function activate(context: vscode.ExtensionContext) {
         async provideHover(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
             const range = document.getWordRangeAtPosition(position);
             if (!range) return null;
-            
+
             const word = document.getText(range);
-            
+
             if (word.length > 3) {
                 const prompt = `Explain the programming concept or purpose of '${word}' in 1 short sentence as if you are Aditya, a luxury AI.`;
                 const answer = await callGemini(prompt);
-                
+
                 const markdown = new vscode.MarkdownString();
                 markdown.appendMarkdown(`**Aditya Analysis:**\n\n`);
                 markdown.appendMarkdown(answer);
@@ -74,7 +74,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         const document = editor.document;
         const selection = editor.selection;
-        
+
         // Grab context (10 lines above)
         const startLine = Math.max(0, selection.active.line - 10);
         const textToAnalyze = document.getText(new vscode.Range(startLine, 0, selection.active.line, selection.active.character));
@@ -86,7 +86,7 @@ export function activate(context: vscode.ExtensionContext) {
         }, async (progress: vscode.Progress<{ message?: string; increment?: number }>) => {
             const prompt = `You are Aditya, an elite AI programmer. Based on this code context, write the logical next few lines of code or complete the current function. Return ONLY the raw code, no markdown formatting, no explanation.\n\nContext:\n${textToAnalyze}`;
             const completion = await callGemini(prompt);
-            
+
             editor.edit((editBuilder: vscode.TextEditorEdit) => {
                 editBuilder.insert(selection.active, completion.replace(/```[\s\S]*?\n/g, '').replace(/```/g, ''));
             });
