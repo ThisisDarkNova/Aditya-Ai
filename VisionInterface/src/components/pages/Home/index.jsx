@@ -42,21 +42,21 @@ export default function Home({
   };
 
   return (
-    <div className="flex-1 overflow-y-auto" style={{ padding: '32px 40px 160px' }}>
+    <div className="flex-1 overflow-y-auto" style={{ padding: '80px 120px 240px' }}>
       <motion.div variants={stagger} initial="hidden" animate="visible"
-        style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 32 }}>
+        style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 64 }}>
 
         {/* ── Greeting + AI Status ── */}
-        <motion.div variants={fadeUp} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16 }}>
+        <motion.div variants={fadeUp} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 24 }}>
           <div>
-            <h1 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.04em', marginBottom: 6 }}>
-              {getGreeting()}, <span style={{ color: 'var(--color-accent)' }}>{username}</span>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 56, fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 16 }}>
+              {getGreeting()}, <span style={{ color: 'var(--color-accent)', fontStyle: 'italic' }}>{username}</span>
             </h1>
-            <p style={{ fontSize: 16, color: 'var(--color-text-secondary)' }}>Ready to continue your journey?</p>
+            <p style={{ fontSize: 18, color: 'var(--color-text-secondary)', letterSpacing: '0.05em', fontWeight: 300 }}>Ready to continue your journey?</p>
           </div>
-          <div className="glass-panel" style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 10, borderRadius: 16 }}>
-            <div style={{ width: 10, height: 10, borderRadius: '50%', background: aiStatusColor, boxShadow: `0 0 8px ${aiStatusColor}` }} />
-            <span style={{ fontSize: 14, fontWeight: 500 }}>{aiStatusLabel}</span>
+          <div className="glass-panel" style={{ padding: '16px 32px', display: 'flex', alignItems: 'center', gap: 16, borderRadius: 24 }}>
+            <div style={{ width: 12, height: 12, borderRadius: '50%', background: aiStatusColor, boxShadow: `0 0 12px ${aiStatusColor}` }} />
+            <span style={{ fontSize: 15, fontWeight: 500, letterSpacing: '0.05em' }}>{aiStatusLabel}</span>
           </div>
         </motion.div>
 
@@ -80,7 +80,7 @@ export default function Home({
         </motion.div>
 
         {/* ── Focus + Daily Summary ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 20 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 48 }}>
           <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.01 }} className="glass-panel" style={{ padding: 24 }}>
             <p style={{ fontSize: 12, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12, fontWeight: 600 }}>Current Focus</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -119,15 +119,15 @@ export default function Home({
       </motion.div>
 
       {/* ── Live Stats Widget ── */}
-      <motion.div variants={fadeUp} style={{ maxWidth: 1000, margin: '32px auto 0', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+      <motion.div variants={fadeUp} style={{ maxWidth: 1200, margin: '64px auto 0', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
         {[
           { label: 'Uptime',          value: formatUptime(realtimeStats?.uptime_seconds),                                                                  color: '#22C55E' },
           { label: 'Cache Hit Rate',  value: realtimeStats?.cache?.hit_rate_pct != null ? `${Math.round(realtimeStats.cache.hit_rate_pct)}%` : '—',        color: '#3B82F6' },
           { label: 'API Calls Saved', value: realtimeStats?.api_calls_saved != null ? String(realtimeStats.api_calls_saved) : '—',                          color: '#A855F7' },
         ].map((s, i) => (
-          <motion.div key={i} whileHover={{ y: -3, scale: 1.02 }} className="glass-panel" style={{ padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <p style={{ fontSize: 11, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>{s.label}</p>
-            <p style={{ fontSize: 22, fontWeight: 700, color: s.color }}>{s.value}</p>
+          <motion.div key={i} whileHover={{ y: -6, scale: 1.02 }} className="glass-panel" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <p style={{ fontSize: 12, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 600 }}>{s.label}</p>
+            <p style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 400, color: s.color }}>{s.value}</p>
           </motion.div>
         ))}
       </motion.div>

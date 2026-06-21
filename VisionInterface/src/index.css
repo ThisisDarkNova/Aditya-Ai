@@ -1,9 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 /* ===== Custom Theme ===== */
-@theme {
-  --font-sans: "Inter", "Outfit", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  --font-serif: "Space Grotesk", "SF Pro Rounded", sans-serif;
+  /* Ultra-Luxury Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  --font-serif: "Playfair Display", serif;
   --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, monospace;
 
   /* Obsidian Black & Sapphire Blue Strict Palette */
@@ -54,13 +55,14 @@ html, body, #root {
 /* ===== Premium Glass Utility Classes ===== */
 .glass-panel {
   background: var(--color-glass);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   border: 1px solid var(--color-border);
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  animation: slowFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .glass-panel:hover {
@@ -144,26 +146,40 @@ html, body, #root {
   }
 }
 
+@keyframes slowFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 /* Global button, panel, and transition glow refinements */
 .glass-panel {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .glass-panel:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   border-color: var(--color-accent) !important;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 20px var(--color-accent-glow) !important;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 0 30px var(--color-accent-glow) !important;
 }
 
 .glass-button {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
 .glass-button:hover {
   border-color: var(--color-accent) !important;
-  box-shadow: 0 0 15px var(--color-accent-glow) !important;
+  box-shadow: 0 0 20px var(--color-accent-glow) !important;
+  transform: scale(1.03);
 }
 
 .glass-input:focus {
-  box-shadow: 0 0 20px var(--color-accent-glow) !important;
+  box-shadow: 0 0 24px var(--color-accent-glow) !important;
 }

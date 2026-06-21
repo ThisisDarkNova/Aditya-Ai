@@ -36,47 +36,47 @@ export default function SystemSkillsWidget({ onSkillTrigger }) {
 
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
+      transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="glass-panel" 
-      style={{ padding: 24, marginTop: 24 }}
+      style={{ padding: 48, marginTop: 16 }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-        <Cpu size={18} color="var(--color-accent)" />
-        <h3 style={{ fontSize: 16, fontWeight: 600, letterSpacing: 0.5, textTransform: 'uppercase' }}>Core OS Automation Skills</h3>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
+        <Cpu size={24} color="var(--color-accent)" />
+        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 400, letterSpacing: '0.02em' }}>Core OS Automation</h3>
       </div>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
         {skills.map(skill => (
           <motion.button
             key={skill.id}
-            whileHover={{ scale: 1.02, y: -2 }}
+            whileHover={{ scale: 1.03, y: -4 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => onSkillTrigger(skill.id)}
             className="glass-button"
             style={{
-              padding: '16px',
+              padding: '24px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: 12,
+              gap: 16,
               border: `1px solid rgba(255,255,255,0.05)`,
               background: 'rgba(0,0,0,0.4)',
               textAlign: 'left'
             }}
           >
             <div style={{ 
-              background: `${skill.color}20`, 
-              padding: 10, 
-              borderRadius: 12,
+              background: `${skill.color}15`, 
+              padding: 14, 
+              borderRadius: 16,
               color: skill.color
             }}>
               {skill.icon}
             </div>
             <div>
-              <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 4 }}>{skill.label}</div>
-              <div style={{ fontSize: 12, color: 'var(--color-text-muted)' }}>{skill.description}</div>
+              <div style={{ fontFamily: 'var(--font-serif)', fontWeight: 600, fontSize: 18, marginBottom: 6 }}>{skill.label}</div>
+              <div style={{ fontSize: 13, color: 'var(--color-text-muted)', fontWeight: 300 }}>{skill.description}</div>
             </div>
           </motion.button>
         ))}
