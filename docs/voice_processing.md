@@ -6,7 +6,7 @@ ADITYA OS integrates local voice capabilities for audio communication.
 
 1. **Wake Word Watcher**
    - Continuously monitors input audio streams for wake indicators.
-   - Runs in a background recovery loop in `backend/core/audio_recovery.py` to prevent failure if drivers drop out.
+   - Runs in a background recovery loop in `CognitiveCore/core/audio_recovery.py` to prevent failure if drivers drop out.
 
 2. **Voice Activity Detection (VAD)**
    - Distinguishes human speech from ambient room noise.

@@ -10,9 +10,9 @@ This guide covers common issues, root causes, and resolutions for developing or 
 The desktop executable crashes immediately on startup.
 
 ### Resolution
-Check `backend/main.py` database integrity checks:
+Check `CognitiveCore/main.py` database integrity checks:
 - Ensure `memory_system` is imported locally or globally without causing a circular dependency.
-- Make sure stdout encoding doesn't crash on standard Windows consoles. We force encoding wrappers in `backend/core/aditya_memory.py` to prevent `UnicodeEncodeError`.
+- Make sure stdout encoding doesn't crash on standard Windows consoles. We force encoding wrappers in `CognitiveCore/core/aditya_memory.py` to prevent `UnicodeEncodeError`.
 
 ---
 
@@ -40,6 +40,6 @@ gc.collect()
 ### Resolution
 Run the built-in database doctor module to verify and automatically repair sqlite structures:
 ```bash
-python backend/main.py --repair-db
+python CognitiveCore/main.py --repair-db
 ```
 This will back up the old database and rebuild tables cleanly.

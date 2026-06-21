@@ -4,21 +4,21 @@ We maintain automated unit testing suites in the backend to ensure zero regressi
 
 ## Python Backend Tests
 
-All backend tests are located in `backend/tests/`.
+All backend tests are located in `CognitiveCore/tests/`.
 
 ### Prerequisites
 
 First, install the development dependencies:
 ```bash
-pip install -r backend/requirements-dev.txt
+pip install -r CognitiveCore/requirements-dev.txt
 ```
 
 ### Running the Tests
 
-To run the full test suite, execute `pytest` inside the `backend/` directory:
+To run the full test suite, execute `pytest` inside the `CognitiveCore/` directory:
 
 ```bash
-cd backend
+cd CognitiveCore
 pytest
 ```
 

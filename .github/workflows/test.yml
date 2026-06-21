@@ -27,10 +27,10 @@ jobs:
     - name: Install Python Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r backend/requirements.txt -r backend/requirements-dev.txt
+        pip install -r CognitiveCore/requirements.txt -r CognitiveCore/requirements-dev.txt
 
     - name: Run Pytest Tests
       run: |
-        cd backend
+        cd CognitiveCore
         python -m pytest --cov=core --cov=modules tests/
 

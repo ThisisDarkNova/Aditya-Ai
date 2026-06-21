@@ -1,7 +1,7 @@
 # 🌌 ADITYA 
 
 <div align="center">
-  <img src="assets/banner.svg" width="100%" max-width="800" alt="ADITYA Phantom Architecture" />
+  <img src="BespokeAssets/banner.svg" width="100%" max-width="800" alt="ADITYA Phantom Architecture" />
   <p><em>Profoundly intelligent. Unapologetically elegant. The pinnacle of bespoke cognitive architecture.</em></p>
 
   [![Precision CI](https://img.shields.io/badge/Architecture-Immaculate-22c55e?style=flat-square&logo=apple&logoColor=white)](#)
@@ -31,11 +31,11 @@ A glimpse into the ADITYA experience, rendered natively in our ultra-optimized E
 
 ### 🏠 The Grand Dashboard
 Your central command. Effortless telemetry, curated insights, and total control—presented with museum-grade typography.
-<img src="assets/premium_home_dashboard.png" width="100%" alt="Aditya Grand Dashboard" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);" />
+<img src="BespokeAssets/premium_home_dashboard.png" width="100%" alt="Aditya Grand Dashboard" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);" />
 
 ### ⚙️ The Couture Configuration
 Tailor your experience. Adjust your persona, refine the acoustics, and shape the intelligence to your exact specifications.
-<img src="assets/premium_settings_panel.png" width="100%" alt="Aditya Couture Configuration" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);" />
+<img src="BespokeAssets/premium_settings_panel.png" width="100%" alt="Aditya Couture Configuration" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);" />
 
 ---
 

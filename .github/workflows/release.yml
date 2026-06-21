@@ -21,11 +21,11 @@ jobs:
     - name: Install Python Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r backend/requirements.txt pyinstaller
+        pip install -r CognitiveCore/requirements.txt pyinstaller
 
     - name: Compile Backend (PyInstaller)
       run: |
-        pyinstaller --onefile --noconsole --name AdityaCore --distpath backend/dist --workpath backend/build backend/main.py
+        pyinstaller --onefile --noconsole --name AdityaCore --distpath CognitiveCore/dist --workpath CognitiveCore/build CognitiveCore/main.py
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -33,15 +33,15 @@ jobs:
         node-version: '20'
 
     - name: Install Node.js Dependencies
-      working-directory: ./client
+      working-directory: ./VisionInterface
       run: npm install
 
     - name: Generate Premium NSIS Assets
-      working-directory: ./client
+      working-directory: ./VisionInterface
       run: python create_installer_assets.py
 
     - name: Build and Package Electron App
-      working-directory: ./client
+      working-directory: ./VisionInterface
       run: npm run electron:dist
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,6 +50,6 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          client/release/ADITYA Setup *.exe
+          VisionInterface/release/ADITYA Setup *.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

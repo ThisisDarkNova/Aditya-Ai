@@ -13,4 +13,4 @@ Here are answers to the most common questions regarding **ADITYA OS**.
 - Open the `.env` file in the installation directory and update the `GEMINI_API_KEY` field.
 
 ## 4. How do I configure custom hotkeys?
-- The default hotkey is `Ctrl+Alt+J`. You can configure shortcuts inside `backend/core/keyboard_listener.py` or through the settings panel.
+- The default hotkey is `Ctrl+Alt+J`. You can configure shortcuts inside `CognitiveCore/core/keyboard_listener.py` or through the settings panel.

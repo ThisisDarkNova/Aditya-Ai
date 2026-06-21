@@ -9,18 +9,18 @@ git pull origin main
 
 echo.
 echo Updating Backend Dependencies...
-if exist "backend\requirements.txt" (
-    pip install -r backend\requirements.txt
+if exist "CognitiveCore\requirements.txt" (
+    pip install -r CognitiveCore\requirements.txt
 ) else (
-    echo [WARNING] backend\requirements.txt not found!
+    echo [WARNING] CognitiveCore\requirements.txt not found!
 )
 
 echo.
 echo Updating Client Dependencies...
-if exist "client\package.json" (
+if exist "VisionInterface\package.json" (
     npm install --prefix client
 ) else (
-    echo [WARNING] client\package.json not found!
+    echo [WARNING] VisionInterface\package.json not found!
 )
 
 echo.

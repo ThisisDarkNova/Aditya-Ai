@@ -4,9 +4,9 @@
   "description": "ADITYA Sentient Cognitive Operating System Workspace",
   "private": true,
   "scripts": {
-    "dev:backend": "cd backend && ..\\.venv\\Scripts\\python.exe main.py --no-ui",
-    "dev:electron": "cd client && npm run electron:dev",
-    "build:backend": "cd backend && ..\\.venv\\Scripts\\pyinstaller.exe --onefile --noconsole --name AdityaCore --distpath dist --workpath build main.py",
-    "build:electron": "cd client && npm run electron:dist"
+    "dev:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\python.exe main.py --no-ui",
+    "dev:electron": "cd VisionInterface && npm run electron:dev",
+    "build:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\pyinstaller.exe --onefile --noconsole --name AdityaCore --distpath dist --workpath build main.py",
+    "build:electron": "cd VisionInterface && npm run electron:dist"
   }
 }
