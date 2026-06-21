@@ -4,6 +4,7 @@
   "description": "Ultra-luxury AI integration for VS Code powered by PhantomEngine.",
   "version": "1.0.0",
   "publisher": "DarkNova",
+  "icon": "logo.png",
   "engines": {
     "vscode": "^1.90.0"
   },
