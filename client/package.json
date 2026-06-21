@@ -18,9 +18,6 @@
     "electron:dist": "vite build && electron-builder"
   },
   "dependencies": {
-    "@capacitor/android": "^8.4.1",
-    "@capacitor/cli": "^8.4.1",
-    "@capacitor/core": "^8.4.1",
     "@tailwindcss/vite": "^4.3.0",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.17.0",
