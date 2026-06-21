@@ -2457,8 +2457,21 @@ if __name__ == "__main__":
 
     time.sleep(1)  # Give the UI server a moment to start
 
-    if "--no-ui" in sys.argv:
-        print("\n[SYSTEM] Running in headless mode (--no-ui). UI is managed externally.")
+    # Determine if we should force headless mode
+    ui_dir_exists = False
+    if getattr(sys, "frozen", False):
+        ui_dir = os.path.join(os.path.dirname(sys.executable), "ui")
+    else:
+        ui_dir = os.path.join(os.path.dirname(__file__), "ui")
+    
+    if os.path.exists(ui_dir):
+        ui_dir_exists = True
+
+    if "--no-ui" in sys.argv or not ui_dir_exists:
+        if not ui_dir_exists and "--no-ui" not in sys.argv:
+            print("\n[SYSTEM] UI directory not found. Automatically running in headless mode.")
+        else:
+            print("\n[SYSTEM] Running in headless mode (--no-ui). UI is managed externally.")
         try:
             # Block the main thread so daemon voice loops stay alive
             while True:
@@ -2466,10 +2479,6 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             pass
     else:
-        if getattr(sys, "frozen", False):
-            ui_dir = os.path.join(os.path.dirname(sys.executable), "ui")
-        else:
-            ui_dir = os.path.join(os.path.dirname(__file__), "ui")
         print(
             "\n[SYSTEM] Launching Holographic Electron UI (Zero White Box) with 24/7 respawn..."
         )
@@ -2477,7 +2486,12 @@ if __name__ == "__main__":
         try:
             while True:
                 # shell=True resolves Windows 'npx' execution
-                electron_proc = subprocess.Popen("npx electron .", cwd=ui_dir, shell=True)
+                # CREATE_NO_WINDOW prevents command prompt window from flashing on Windows
+                popen_kwargs = {"cwd": ui_dir, "shell": True}
+                if sys.platform == "win32":
+                    popen_kwargs["creationflags"] = 0x08000000 # subprocess.CREATE_NO_WINDOW
+                
+                electron_proc = subprocess.Popen("npx electron .", **popen_kwargs)
 
                 # Block the main thread so daemon voice loops stay alive
                 while electron_proc.poll() is None:

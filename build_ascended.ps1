@@ -10,8 +10,14 @@ Write-Host "🚀 ASCENSION: PRODUCTION BUILD INITIATED" -ForegroundColor Cyan
 Write-Host "==========================================" -ForegroundColor Cyan
 
 # 1. Prepare Release Directory
-if (Test-Path $ReleaseDir) { Remove-Item -Recurse -Force $ReleaseDir }
-New-Item -ItemType Directory -Force -Path $ReleaseDir | Out-Null
+if (Test-Path $ReleaseDir) {
+    # Remove files but ignore errors on locked files (like *.old)
+    Get-ChildItem $ReleaseDir | ForEach-Object {
+        try { Remove-Item -Recurse -Force $_.FullName -ErrorAction SilentlyContinue } catch {}
+    }
+} else {
+    New-Item -ItemType Directory -Force -Path $ReleaseDir | Out-Null
+}
 
 # 2. Build StreamWidgets (OBS Overlays)
 Write-Host "`n[1/4] Building StreamWidgets (Vite)..." -ForegroundColor Yellow
