@@ -9,7 +9,7 @@ const navItems = [
   { id: 'Settings', icon: Settings, label: 'Settings' },
 ];
 
-export default function Sidebar({ activePage, setActivePage, status }) {
+export default function Sidebar({ activePage, setActivePage, status, isConnected }) {
   const [pinned, setPinned] = useState(false); // locked open
   const [hovered, setHovered] = useState(false);
 
@@ -138,7 +138,7 @@ export default function Sidebar({ activePage, setActivePage, status }) {
       {/* Bottom: Status Indicators */}
       <div style={{ padding: '16px 10px', borderTop: '1px solid var(--color-border)', display: 'flex', flexDirection: 'column', gap: 10 }}>
         {[
-          { icon: Wifi, color: 'var(--color-success)', label: 'Connected' },
+          { icon: Wifi, color: isConnected ? 'var(--color-success)' : 'var(--color-danger)', label: isConnected ? 'Connected' : 'Offline' },
           { icon: Mic, color: 'var(--color-accent)', label: 'Voice Ready' },
           { icon: Shield, color: 'var(--color-text-muted)', label: 'ADITYA OS v1.0' },
         ].map(({ icon: Icon, color, label }, i) => (

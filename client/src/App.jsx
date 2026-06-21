@@ -136,7 +136,7 @@ export default function App() {
         <div className="flex w-full h-full relative" style={{ paddingTop: 32 }}>
           {/* Floating Glass Sidebar */}
           <div className="absolute left-4 top-10 bottom-4 z-50">
-            <Sidebar setActivePage={setActivePage} activePage={activePage} status={backend.status} />
+            <Sidebar setActivePage={setActivePage} activePage={activePage} status={backend.status} isConnected={backend.isConnected} />
           </div>
 
           <main className="flex flex-col flex-1 min-w-0 relative overflow-hidden ml-[96px]">
