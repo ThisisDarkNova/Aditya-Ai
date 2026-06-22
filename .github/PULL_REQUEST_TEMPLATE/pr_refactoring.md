@@ -5,7 +5,7 @@ Explain the motivation behind this refactoring. What parts of the codebase were 
 ## Refactored Components
 
 List the files and directories touched:
-- E.g., `backend/core/aditya_memory.py`
+- E.g., `backend/core/vespera_memory.py`
 
 ## Verification and Safety
 

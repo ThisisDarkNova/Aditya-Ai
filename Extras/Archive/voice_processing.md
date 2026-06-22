@@ -1,6 +1,6 @@
 # Voice Processing Engine
 
-ADITYA OS integrates local voice capabilities for audio communication.
+VESPERA OS integrates local voice capabilities for audio communication.
 
 ## Subsystems
 

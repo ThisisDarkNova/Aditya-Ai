@@ -1,4 +1,4 @@
-# ADITYA OS Style Guide
+# VESPERA OS Style Guide
 
 This document defines naming, formatting, styling, and design conventions across the repository.
 

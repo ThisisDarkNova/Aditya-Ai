@@ -1,6 +1,6 @@
-# ADITYA OS Troubleshooting Guide
+# VESPERA OS Troubleshooting Guide
 
-This guide covers common issues, root causes, and resolutions for developing or running ADITYA OS.
+This guide covers common issues, root causes, and resolutions for developing or running VESPERA OS.
 
 ---
 
@@ -12,7 +12,7 @@ The desktop executable crashes immediately on startup.
 ### Resolution
 Check `CognitiveCore/main.py` database integrity checks:
 - Ensure `memory_system` is imported locally or globally without causing a circular dependency.
-- Make sure stdout encoding doesn't crash on standard Windows consoles. We force encoding wrappers in `CognitiveCore/core/aditya_memory.py` to prevent `UnicodeEncodeError`.
+- Make sure stdout encoding doesn't crash on standard Windows consoles. We force encoding wrappers in `CognitiveCore/core/vespera_memory.py` to prevent `UnicodeEncodeError`.
 
 ---
 

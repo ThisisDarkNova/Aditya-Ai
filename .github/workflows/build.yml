@@ -1,4 +1,4 @@
-name: Build and Release ADITYA OS
+name: Build and Release VESPERA OS
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
 
     - name: Compile Backend (PyInstaller)
       run: |
-        pyinstaller --onefile --noconsole --name AdityaCore --distpath CognitiveCore/dist --workpath CognitiveCore/build CognitiveCore/main.py
+        pyinstaller --onefile --noconsole --name VesperaCore --distpath CognitiveCore/dist --workpath CognitiveCore/build CognitiveCore/main.py
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -50,5 +50,5 @@ jobs:
     - name: Upload Installer Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ADITYA-Setup
-        path: VisionInterface/release/ADITYA Setup *.exe
+        name: VESPERA-Setup
+        path: VisionInterface/release/VESPERA Setup *.exe

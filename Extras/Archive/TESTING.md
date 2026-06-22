@@ -1,4 +1,4 @@
-# ADITYA OS Testing Guide
+# VESPERA OS Testing Guide
 
 We maintain automated unit testing suites in the backend to ensure zero regression when updates are published.
 

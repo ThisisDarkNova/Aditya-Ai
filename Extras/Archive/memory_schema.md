@@ -1,6 +1,6 @@
 # Cognitive Memory Schema
 
-ADITYA OS uses SQLite3 database files to manage long-term contexts, preferences, chat histories, and learned workflows.
+VESPERA OS uses SQLite3 database files to manage long-term contexts, preferences, chat histories, and learned workflows.
 
 ## Table Structures
 

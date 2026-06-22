@@ -1,6 +1,6 @@
 # Cognitive Architecture
 
-ADITYA OS operates as a sentient desktop agent, relying on a main execution loop, localized thread boundaries, and a dynamic event bus.
+VESPERA OS operates as a sentient desktop agent, relying on a main execution loop, localized thread boundaries, and a dynamic event bus.
 
 ```mermaid
 graph TD

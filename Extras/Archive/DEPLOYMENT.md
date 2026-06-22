@@ -1,4 +1,4 @@
-# ADITYA OS Packaging & Deployment
+# VESPERA OS Packaging & Deployment
 
 Follow these steps to compile and package the sentient cognitive OS into a standalone installer on Windows.
 
@@ -10,10 +10,10 @@ First compile the Python daemon using PyInstaller:
 cd CognitiveCore
 pip install -r requirements.txt
 pip install pyinstaller
-pyinstaller AdityaCore.spec
+pyinstaller VesperaCore.spec
 ```
 
-This generates a standalone executable at `CognitiveCore/dist/AdityaCore.exe`.
+This generates a standalone executable at `CognitiveCore/dist/VesperaCore.exe`.
 
 ## 2. Build Frontend UI Assets
 
@@ -36,5 +36,5 @@ cd VisionInterface
 npm run package
 ```
 
-The output setup installer will be output to `VisionInterface/release/ADITYA Setup 1.0.0.exe`.
+The output setup installer will be output to `VisionInterface/release/VESPERA Setup 1.0.0.exe`.
 This setup includes the compiled Python backend bundled inside as an `extraResource` and extracts it to run alongside the Electron front-end dynamically.

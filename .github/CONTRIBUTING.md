@@ -1,6 +1,6 @@
-# 🌌 Contributing to ADITYA OS
+# 🌌 Contributing to VESPERA OS
 
-Thank you for helping to improve ADITYA OS! We welcome all contributions, especially those focusing on **stability, performance, and premium animations**.
+Thank you for helping to improve VESPERA OS! We welcome all contributions, especially those focusing on **stability, performance, and premium animations**.
 
 ---
 
@@ -17,7 +17,7 @@ To maintain our premium dark-glassmorphism aesthetic, all frontend modifications
 
 ### 1. Bug Reporting & Troubleshooting
 - Use the **Bug Report** template to submit issues.
-- Please attach the relevant logs from `%APPDATA%/ADITYA/logs/electron.log` or `launcher.log` to make debugging easier.
+- Please attach the relevant logs from `%APPDATA%/VESPERA/logs/electron.log` or `launcher.log` to make debugging easier.
 
 ### 2. Linting & Formatting Checks
 Before opening a Pull Request, run formatting scripts locally to prevent workflow failures:

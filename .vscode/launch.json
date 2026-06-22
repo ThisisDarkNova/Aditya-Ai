@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch ADITYA Backend",
+      "name": "Launch VESPERA Backend",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/backend/main.py",

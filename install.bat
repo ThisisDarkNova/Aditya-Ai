@@ -1,18 +1,18 @@
 @echo off
 setlocal
-:: ADITYA OS - Sentient Cognitive Operating System Installer
-:: Usage: Run this batch script to download and install ADITYA OS
+:: VESPERA OS - Sentient Cognitive Operating System Installer
+:: Usage: Run this batch script to download and install VESPERA OS
 
 echo ==============================================
-echo 🌌 ADITYA -- Sentient Cognitive Operating System
+echo 🌌 VESPERA -- Sentient Cognitive Operating System
 echo ==============================================
 echo Initializing secure installation pipeline...
 
 set "REPO_OWNER=ThisisDarkNova"
-set "REPO_NAME=Aditya-Ai"
+set "REPO_NAME=Vespera-Ai"
 set "RELEASE_VERSION=v1.0.0"
-set "DOWNLOAD_URL=https://github.com/%REPO_OWNER%/%REPO_NAME%/releases/download/%RELEASE_VERSION%/ADITYA%%20Setup%%201.0.0.exe"
-set "TEMP_PATH=%TEMP%\ADITYA_Setup_1.0.0.exe"
+set "DOWNLOAD_URL=https://github.com/%REPO_OWNER%/%REPO_NAME%/releases/download/%RELEASE_VERSION%/VESPERA%%20Setup%%201.0.0.exe"
+set "TEMP_PATH=%TEMP%\VESPERA_Setup_1.0.0.exe"
 
 echo Downloading installer from GitHub Releases...
 echo Source: %DOWNLOAD_URL%
@@ -27,15 +27,15 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 echo.
-echo Launching ADITYA Setup...
+echo Launching VESPERA Setup...
 echo Please complete the setup wizard window.
 echo.
 
 start /wait "" "%TEMP_PATH%"
 
 if %ERRORLEVEL% EQU 0 (
-    echo 🎉 ADITYA OS installed successfully!
-    echo You can now run ADITYA from your desktop or start menu.
+    echo 🎉 VESPERA OS installed successfully!
+    echo You can now run VESPERA from your desktop or start menu.
 ) else (
     echo [WARNING] Installer closed with exit code: %ERRORLEVEL%
 )

@@ -1,7 +1,7 @@
 @echo off
 setlocal
 echo ==============================================
-echo 🌌 ADITYA -- System Update Utility
+echo 🌌 VESPERA -- System Update Utility
 echo ==============================================
 echo Fetching latest updates from GitHub...
 git fetch origin
@@ -24,6 +24,6 @@ if exist "VisionInterface\package.json" (
 )
 
 echo.
-echo 🎉 Update Complete! ADITYA is now running the latest version.
+echo 🎉 Update Complete! VESPERA is now running the latest version.
 pause
 endlocal

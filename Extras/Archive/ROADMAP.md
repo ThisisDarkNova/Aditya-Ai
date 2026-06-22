@@ -1,6 +1,6 @@
-# ADITYA OS Roadmap
+# VESPERA OS Roadmap
 
-This document outlines the planned milestones and future features for **ADITYA OS**.
+This document outlines the planned milestones and future features for **VESPERA OS**.
 
 ## 🚀 Q3 2026: Core Experience & Voice Upgrades
 - [ ] Implement local wake word engine (offline wake phrase).
@@ -13,5 +13,5 @@ This document outlines the planned milestones and future features for **ADITYA O
 - [ ] Build OBS status streaming dashboard overlay.
 
 ## 🌐 2027: Multi-Device Sync & API Integrations
-- [ ] Cloud syncing for ADITYA memory profile.
+- [ ] Cloud syncing for VESPERA memory profile.
 - [ ] Extend API to support native Windows notifications.

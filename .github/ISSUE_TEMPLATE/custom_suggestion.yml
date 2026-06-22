@@ -1,12 +1,12 @@
 name: 💡 Feature Suggestion
-description: Propose a premium animation, stability check, or capabilities upgrade for ADITYA.
+description: Propose a premium animation, stability check, or capabilities upgrade for VESPERA.
 title: "[Feat]: "
 labels: ["enhancement", "proposal"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for suggesting an improvement to ADITYA!
+        Thank you for suggesting an improvement to VESPERA!
         Please fill out this form to help us understand your vision.
 
   - type: input

@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 async function getApiKey(): Promise<string> {
-    const config = vscode.workspace.getConfiguration('aditya');
+    const config = vscode.workspace.getConfiguration('vespera');
     let apiKey = config.get<string>('geminiApiKey');
     if (!apiKey) {
         apiKey = process.env.GEMINI_API_KEY;
@@ -31,19 +31,19 @@ async function callGemini(prompt: string): Promise<string> {
 
         if (!response.ok) {
             console.error('Gemini API Error:', await response.text());
-            return "Aditya: API Error. Check connection.";
+            return "Vespera: API Error. Check connection.";
         }
 
         const data: any = await response.json();
         return data.candidates[0].content.parts[0].text;
     } catch (e) {
         console.error(e);
-        return "Aditya: Failed to connect to Gemini Core.";
+        return "Vespera: Failed to connect to Gemini Core.";
     }
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Aditya: The Ghost Writer is now active.');
+    console.log('Vespera: The Marginalia is now active.');
 
     // Hover Provider for Contextual Analysis
     const hoverProvider = vscode.languages.registerHoverProvider('*', {
@@ -54,19 +54,19 @@ export function activate(context: vscode.ExtensionContext) {
             const word = document.getText(range);
 
             if (word.length > 3) {
-                const prompt = `Explain the programming concept or purpose of '${word}' in 1 short sentence as if you are Aditya, a luxury AI.`;
+                const prompt = `Explain the programming concept or purpose of '${word}' in 1 short sentence as if you are Vespera, a luxury AI.`;
                 const answer = await callGemini(prompt);
 
                 const markdown = new vscode.MarkdownString();
-                markdown.appendMarkdown(`**Aditya Analysis:**\n\n`);
+                markdown.appendMarkdown(`**Vespera Analysis:**\n\n`);
                 markdown.appendMarkdown(answer);
                 return new vscode.Hover(markdown);
             }
         }
     });
 
-    // The Ghost Writer Command
-    let disposable = vscode.commands.registerCommand('aditya.summonGhostWriter', async () => {
+    // The Marginalia Command
+    let disposable = vscode.commands.registerCommand('vespera.summonMarginalia', async () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             return;
@@ -81,16 +81,16 @@ export function activate(context: vscode.ExtensionContext) {
 
         vscode.window.withProgress({
             location: vscode.ProgressLocation.Notification,
-            title: "Aditya is writing...",
+            title: "Vespera is writing...",
             cancellable: false
         }, async (progress: vscode.Progress<{ message?: string; increment?: number }>) => {
-            const prompt = `You are Aditya, an elite AI programmer. Based on this code context, write the logical next few lines of code or complete the current function. Return ONLY the raw code, no markdown formatting, no explanation.\n\nContext:\n${textToAnalyze}`;
+            const prompt = `You are Vespera, an elite AI programmer. Based on this code context, write the logical next few lines of code or complete the current function. Return ONLY the raw code, no markdown formatting, no explanation.\n\nContext:\n${textToAnalyze}`;
             const completion = await callGemini(prompt);
 
             editor.edit((editBuilder: vscode.TextEditorEdit) => {
                 editBuilder.insert(selection.active, completion.replace(/```[\s\S]*?\n/g, '').replace(/```/g, ''));
             });
-            vscode.window.showInformationMessage('Aditya: Ghost Writer insertion complete.');
+            vscode.window.showInformationMessage('Vespera: Marginalia insertion complete.');
         });
     });
 
@@ -98,5 +98,5 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-    console.log('Aditya: The Ghost Writer deactivated.');
+    console.log('Vespera: The Marginalia deactivated.');
 }

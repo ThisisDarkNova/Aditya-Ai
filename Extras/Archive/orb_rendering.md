@@ -1,6 +1,6 @@
 # 3D WebGL Orb Rendering Specification
 
-The visual representation of ADITYA OS is powered by a high-performance 3D particle orb.
+The visual representation of VESPERA OS is powered by a high-performance 3D particle orb.
 
 ## Particle System Parameters
 

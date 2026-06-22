@@ -1,7 +1,7 @@
 @echo off
 setlocal
 echo ==============================================
-echo 🌌 ADITYA -- System Repair and Diagnostics
+echo 🌌 VESPERA -- System Repair and Diagnostics
 echo ==============================================
 echo.
 echo [1/4] Clearing Python __pycache__ directories...

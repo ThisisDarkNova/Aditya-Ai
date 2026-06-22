@@ -1,5 +1,5 @@
-# ADITYA OS - Sentient Cognitive Operating System Installer
-# Usage: irm "https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/install.ps1" | iex
+# VESPERA OS - Sentient Cognitive Operating System Installer
+# Usage: irm "https://raw.githubusercontent.com/ThisisDarkNova/Vespera-Ai/main/install.ps1" | iex
 
 $ErrorActionPreference = "Stop"
 
@@ -9,20 +9,20 @@ $ErrorActionPreference = "Stop"
 
 # Clear host and print a premium ASCII banner
 Clear-Host
-Write-Host "🌌 ADITYA — Sentient Cognitive Operating System" -ForegroundColor Cyan
+Write-Host "🌌 VESPERA — Sentient Cognitive Operating System" -ForegroundColor Cyan
 Write-Host "==============================================" -ForegroundColor DarkGray
 Write-Host "Initializing secure installation pipeline..." -ForegroundColor Gray
 
 # Define repository specific URLs
 $repoOwner = "ThisisDarkNova"
-$repoName = "Aditya-Ai"
+$repoName = "Vespera-Ai"
 $releaseVersion = "v1.0.0"
-$installerName = "ADITYA.Setup.1.0.0.exe"
+$installerName = "VESPERA.Setup.1.0.0.exe"
 
 # If the installer filename on GitHub Releases contains spaces, GitHub might replace spaces with dots or %20.
-# The asset name uploaded is "ADITYA Setup 1.0.0.exe" or "ADITYA Setup 1.0.0.exe".
-$downloadUrl = "https://github.com/$repoOwner/$repoName/releases/download/$releaseVersion/ADITYA%20Setup%201.0.0.exe"
-$tempPath = Join-Path $env:TEMP "ADITYA_Setup_1.0.0.exe"
+# The asset name uploaded is "VESPERA Setup 1.0.0.exe" or "VESPERA Setup 1.0.0.exe".
+$downloadUrl = "https://github.com/$repoOwner/$repoName/releases/download/$releaseVersion/VESPERA%20Setup%201.0.0.exe"
+$tempPath = Join-Path $env:TEMP "VESPERA_Setup_1.0.0.exe"
 
 Write-Host "Downloading installer from GitHub Releases..." -ForegroundColor Yellow
 Write-Host "Source: $downloadUrl" -ForegroundColor DarkGray
@@ -39,7 +39,7 @@ catch {
 }
 
 # Run the installer
-Write-Host "Launching ADITYA Setup..." -ForegroundColor Cyan
+Write-Host "Launching VESPERA Setup..." -ForegroundColor Cyan
 Write-Host "Please complete the setup wizard window." -ForegroundColor Gray
 
 try {
@@ -47,8 +47,8 @@ try {
     $process = Start-Process -FilePath $tempPath -Wait -PassThru
     
     if ($process.ExitCode -eq 0) {
-        Write-Host "🎉 ADITYA OS installed successfully!" -ForegroundColor Green
-        Write-Host "You can now run ADITYA from your desktop or start menu." -ForegroundColor Cyan
+        Write-Host "🎉 VESPERA OS installed successfully!" -ForegroundColor Green
+        Write-Host "You can now run VESPERA from your desktop or start menu." -ForegroundColor Cyan
     } else {
         Write-Host "⚠️ Installer closed with exit code: $($process.ExitCode)" -ForegroundColor Yellow
     }

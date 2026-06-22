@@ -25,7 +25,7 @@ jobs:
 
     - name: Compile Backend (PyInstaller)
       run: |
-        pyinstaller --onefile --noconsole --name AdityaCore --distpath CognitiveCore/dist --workpath CognitiveCore/build CognitiveCore/main.py
+        pyinstaller --onefile --noconsole --name VesperaCore --distpath CognitiveCore/dist --workpath CognitiveCore/build CognitiveCore/main.py
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -50,6 +50,6 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          VisionInterface/release/ADITYA Setup *.exe
+          VisionInterface/release/VESPERA Setup *.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

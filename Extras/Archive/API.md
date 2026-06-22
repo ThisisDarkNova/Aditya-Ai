@@ -1,6 +1,6 @@
-# ADITYA OS Core API Documentation
+# VESPERA OS Core API Documentation
 
-ADITYA OS exposes a local HTTP JSON API on port `7865` for communication between the Electron UI frontend, webviews, and external integrations.
+VESPERA OS exposes a local HTTP JSON API on port `7865` for communication between the Electron UI frontend, webviews, and external integrations.
 
 ---
 

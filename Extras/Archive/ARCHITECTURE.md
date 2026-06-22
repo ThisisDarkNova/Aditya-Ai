@@ -1,6 +1,6 @@
-# ADITYA OS Architecture Design
+# VESPERA OS Architecture Design
 
-ADITYA OS features a highly decoupled, multi-process architecture to maximize system performance and UI responsiveness.
+VESPERA OS features a highly decoupled, multi-process architecture to maximize system performance and UI responsiveness.
 
 ## Components Map
 

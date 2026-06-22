@@ -1,12 +1,12 @@
 {
-  "name": "aditya-os",
+  "name": "vespera-os",
   "version": "1.0.0",
-  "description": "ADITYA Sentient Cognitive Operating System Workspace",
+  "description": "VESPERA Sentient Cognitive Operating System Workspace",
   "private": true,
   "scripts": {
     "dev:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\python.exe main.py --no-ui",
     "dev:electron": "cd VisionInterface && npm run electron:dev",
-    "build:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\pyinstaller.exe --onefile --noconsole --name AdityaCore --distpath dist --workpath build main.py",
+    "build:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\pyinstaller.exe --onefile --noconsole --name VesperaCore --distpath dist --workpath build main.py",
     "build:electron": "cd VisionInterface && npm run electron:dist"
   }
 }

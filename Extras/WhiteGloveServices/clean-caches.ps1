@@ -1,2 +1,2 @@
-# Copyright (c) 2026 ThisisDarkNova - ADITYA OS
+# Copyright (c) 2026 ThisisDarkNova - VESPERA OS
 Write-Host 'Running clean-caches...'

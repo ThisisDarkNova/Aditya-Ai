@@ -1,6 +1,6 @@
 # Project Governance
 
-This document outlines the governance model for the **ADITYA OS** project.
+This document outlines the governance model for the **VESPERA OS** project.
 
 ## Maintainer Roles & Responsibilities
 

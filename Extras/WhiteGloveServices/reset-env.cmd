@@ -1,4 +1,4 @@
-:: Copyright (c) 2026 ThisisDarkNova - ADITYA OS
+:: Copyright (c) 2026 ThisisDarkNova - VESPERA OS
 @echo off
 echo Running reset-env...
 pause

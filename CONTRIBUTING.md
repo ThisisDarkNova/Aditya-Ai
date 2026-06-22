@@ -1,14 +1,14 @@
-# Contributing to Aditya
+# Contributing to Vespera
 
-First off, thank you for considering contributing to Aditya. It's people like you that make this ecosystem unparalleled.
+First off, thank you for considering contributing to Vespera. It's people like you that make this ecosystem unparalleled.
 
 ## The Omni-Presence Architecture
-Aditya is not a simple script; it is a Sentient Operating System. When contributing, please ensure you understand the 5 pillars:
-1. `AdityaWeb` (Next.js)
-2. `PhantomEngine` (Python Daemons)
-3. `StreamWidgets` (React OBS Overlays)
-4. `VSCodeExtension` (TypeScript Ghost Writer)
-5. `BespokeCanvas` (Electron)
+Vespera is not a simple script; it is a Sentient Operating System. When contributing, please ensure you understand the 5 pillars:
+1. `VesperaWeb` (Next.js)
+2. `umbracore` (Python Daemons)
+3. `aegis-cast` (React OBS Overlays)
+4. `VSCodeExtension` (TypeScript Marginalia)
+5. `wraithglass` (Electron)
 
 ## Local Development
 Do not submit PRs without verifying that the master build script passes locally:
@@ -19,5 +19,5 @@ Do not submit PRs without verifying that the master build script passes locally:
 ## Submitting Pull Requests
 1. Fork the repository.
 2. Create a new branch `feature/your-feature-name`.
-3. Ensure the architectural integrity is maintained (no cloud telemetry without user consent; Aditya is local-first).
+3. Ensure the architectural integrity is maintained (no cloud telemetry without user consent; Vespera is local-first).
 4. Submit your PR with a detailed breakdown of the changes.

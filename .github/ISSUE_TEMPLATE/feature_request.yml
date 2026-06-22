@@ -1,12 +1,12 @@
 name: "🚀 Feature Request"
-description: Propose a new feature or improvement for ADITYA OS.
+description: Propose a new feature or improvement for VESPERA OS.
 title: "[FEATURE]: "
 labels: ["enhancement", "feature"]
 body:
   - type: markdown
     attributes:
       value: |
-        Have an idea to make ADITYA OS better? We'd love to hear it!
+        Have an idea to make VESPERA OS better? We'd love to hear it!
   - type: textarea
     id: problem
     attributes:

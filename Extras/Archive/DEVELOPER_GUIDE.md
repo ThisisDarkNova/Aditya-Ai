@@ -1,6 +1,6 @@
-# ADITYA OS Developer Guide
+# VESPERA OS Developer Guide
 
-This guide describes how to extend ADITYA OS capabilities by developing custom skills.
+This guide describes how to extend VESPERA OS capabilities by developing custom skills.
 
 ## Adding a Custom Skill
 

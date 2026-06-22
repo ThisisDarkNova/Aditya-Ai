@@ -1,7 +1,7 @@
 {
-  "name": "aditya-ghost-writer",
-  "displayName": "Aditya: The Ghost Writer",
-  "description": "Ultra-luxury AI integration for VS Code powered by PhantomEngine.",
+  "name": "vespera-marginalia",
+  "displayName": "Vespera: The Marginalia",
+  "description": "Ultra-luxury AI integration for VS Code powered by umbracore.",
   "version": "1.0.0",
   "publisher": "DarkNova",
   "icon": "logo.png",
@@ -17,25 +17,25 @@
   "contributes": {
     "commands": [
       {
-        "command": "aditya.summonGhostWriter",
-        "title": "Aditya: Summon Ghost Writer"
+        "command": "vespera.summonMarginalia",
+        "title": "Vespera: Summon Marginalia"
       }
     ],
     "keybindings": [
       {
-        "command": "aditya.summonGhostWriter",
+        "command": "vespera.summonMarginalia",
         "key": "ctrl+shift+a",
         "mac": "cmd+shift+a",
         "when": "editorTextFocus"
       }
     ],
     "configuration": {
-      "title": "Aditya Configuration",
+      "title": "Vespera Configuration",
       "properties": {
-        "aditya.geminiApiKey": {
+        "vespera.geminiApiKey": {
           "type": "string",
           "default": "",
-          "description": "The API Key used by Aditya for Gemini AI operations."
+          "description": "The API Key used by Vespera for Gemini AI operations."
         }
       }
     }

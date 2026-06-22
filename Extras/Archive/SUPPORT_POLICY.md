@@ -1,6 +1,6 @@
 # Support Policy & Maintenance SLA
 
-We offer structured maintenance intervals for **ADITYA OS** users and developers.
+We offer structured maintenance intervals for **VESPERA OS** users and developers.
 
 ## Support Scope
 

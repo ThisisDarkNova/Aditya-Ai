@@ -1,13 +1,13 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ThisisDarkNova/Aditya-Ai/main/AdityaWeb/public/logo.png" alt="Aditya Logo" width="120" />
+  <img src="https://raw.githubusercontent.com/ThisisDarkNova/Vespera-Ai/main/VesperaWeb/public/logo.png" alt="Vespera Logo" width="120" />
 </div>
 
-<h1 align="center">ADITYA</h1>
+<h1 align="center">VESPERA</h1>
 <h3 align="center">The Sentient Operating System</h3>
 
 <div align="center">
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/ThisisDarkNova/Aditya-Ai/ascension-ci.yml?style=for-the-badge&color=white&labelColor=black)](https://github.com/ThisisDarkNova/Aditya-Ai/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ThisisDarkNova/Vespera-Ai/ascension-ci.yml?style=for-the-badge&color=white&labelColor=black)](https://github.com/ThisisDarkNova/Vespera-Ai/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-white.svg?style=for-the-badge&labelColor=black)](https://opensource.org/licenses/MIT)
 [![Status: Ascended](https://img.shields.io/badge/Status-Ascended-white.svg?style=for-the-badge&labelColor=black)]()
 
@@ -15,19 +15,19 @@
 
 ---
 
-**Aditya** is not an assistant. It is a Rolls-Royce tier extension of your central nervous system. Built as a massively parallel Monorepo, Aditya hooks directly into your local hardware, your VS Code environment, and your OBS Live Stream, orchestrating your digital life entirely in the background.
+**Vespera** is not an assistant. It is a Rolls-Royce tier extension of your central nervous system. Built as a massively parallel Monorepo, Vespera hooks directly into your local hardware, your VS Code environment, and your OBS Live Stream, orchestrating your digital life entirely in the background.
 
 ## 🌌 The Omni-Presence Architecture
 
-Aditya operates across 5 distinct pillars, communicating via local WebSockets to ensure **absolute data privacy** (zero cloud telemetry).
+Vespera operates across 5 distinct pillars, communicating via local WebSockets to ensure **absolute data privacy** (zero cloud telemetry).
 
 ```mermaid
 graph TD
     classDef dark fill:#0a0a0a,stroke:#333,stroke-width:2px,color:#fff;
     classDef highlight fill:#fff,stroke:#000,stroke-width:2px,color:#000;
 
-    PE["Phantom Engine (Python)"]:::dark
-    WEB["Aditya Web (Next.js)"]:::dark
+    PE["Umbracore Engine (Python)"]:::dark
+    WEB["Vespera Web (Next.js)"]:::dark
     OBS["Stream Widgets (React)"]:::dark
     VSC["VS Code Extension (TS)"]:::dark
     BC["Bespoke Canvas (Electron)"]:::dark
@@ -51,19 +51,19 @@ graph TD
 
 ## 💎 Core Capabilities
 
-- **Code Telepathy (Ghost Writer):** A custom VS Code extension that predicts optimal code structures and injects them physically into your editor.
+- **Code Telepathy (Marginalia):** A custom VS Code extension that predicts optimal code structures and injects them physically into your editor.
 - **The Chauffeur:** A Python daemon hooked into OBS WebSockets that automatically swaps your streaming scenes when you go AFK or die in-game.
-- **Phantom Mode:** Aditya instantly detects unauthorized screen captures (Discord, OBS) and drops its UI opacity to 0% to protect your data.
+- **Umbracore Mode:** Vespera instantly detects unauthorized screen captures (Discord, OBS) and drops its UI opacity to 0% to protect your data.
 - **Thermal Guardian:** Hard-wired motherboard sensors monitor CPU junction temperatures, forcefully suspending AI background tasks if temps exceed 85°C.
 
 ## 🚀 Installation & Build
 
-Aditya is designed to be compiled locally. We provide a master PowerShell script that sequentially builds all 5 pillars.
+Vespera is designed to be compiled locally. We provide a master PowerShell script that sequentially builds all 5 pillars.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ThisisDarkNova/Aditya-Ai.git
-   cd Aditya-Ai
+   git clone https://github.com/ThisisDarkNova/Vespera-Ai.git
+   cd Vespera-Ai
    ```
 2. Execute the Master Build Script:
    ```powershell
@@ -73,7 +73,7 @@ Aditya is designed to be compiled locally. We provide a master PowerShell script
 
 ## 🤝 Contributing & Security
 
-We maintain strict standards for the Aditya ecosystem.
+We maintain strict standards for the Vespera ecosystem.
 - Read our [Contributing Guide](CONTRIBUTING.md) before submitting Pull Requests.
 - For vulnerability reports (e.g., WebSocket escapes), please refer to our [Security Policy](SECURITY.md).
 
