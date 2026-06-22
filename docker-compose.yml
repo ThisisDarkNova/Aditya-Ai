@@ -8,7 +8,7 @@ services:
     ports:
       - "7865:7865"
     volumes:
-      - ./CognitiveCore/data:/app/CognitiveCore/data
+      - ./packages/umbracore/data:/app/packages/umbracore/data
     environment:
       - PYTHONUNBUFFERED=1
       - ENV=development

@@ -31,3 +31,5 @@ Thumbs.db
 # PyInstaller / Build Artifacts
 build/
 *.spec
+apps/wraithglass/release/
+

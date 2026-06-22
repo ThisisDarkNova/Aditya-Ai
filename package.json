@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "VESPERA Sentient Cognitive Operating System Workspace",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\python.exe main.py --no-ui",
-    "dev:electron": "cd VisionInterface && npm run electron:dev",
-    "build:backend": "cd CognitiveCore && ..\\.venv\\ConciergeScripts\\pyinstaller.exe --onefile --noconsole --name VesperaCore --distpath dist --workpath build main.py",
-    "build:electron": "cd VisionInterface && npm run electron:dist"
+    "dev:backend": "cd packages/umbracore && ..\\..\\.venv\\Scripts\\python.exe main.py --no-ui",
+    "dev:electron": "cd apps/wraithglass && npm run electron:dev",
+    "build:backend": "cd packages/umbracore && ..\\..\\.venv\\Scripts\\pyinstaller.exe --onefile --noconsole --name VesperaCore --distpath dist --workpath build main.py",
+    "build:electron": "cd apps/wraithglass && npm run electron:dist"
   }
 }

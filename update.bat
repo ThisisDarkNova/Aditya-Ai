@@ -7,20 +7,19 @@ echo Fetching latest updates from GitHub...
 git fetch origin
 git pull origin main
 
-echo.
 echo Updating Backend Dependencies...
-if exist "CognitiveCore\requirements.txt" (
-    pip install -r CognitiveCore\requirements.txt
+if exist "packages\umbracore\requirements.txt" (
+    pip install -r packages\umbracore\requirements.txt
 ) else (
-    echo [WARNING] CognitiveCore\requirements.txt not found!
+    echo [WARNING] packages\umbracore\requirements.txt not found!
 )
 
 echo.
 echo Updating Client Dependencies...
-if exist "VisionInterface\package.json" (
-    npm install --prefix client
+if exist "apps\wraithglass\package.json" (
+    npm install --prefix apps\wraithglass
 ) else (
-    echo [WARNING] VisionInterface\package.json not found!
+    echo [WARNING] apps\wraithglass\package.json not found!
 )
 
 echo.

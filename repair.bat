@@ -10,21 +10,21 @@ echo [OK] Python cache cleared.
 
 echo.
 echo [2/4] Clearing Vite/NPM caches...
-if exist "VisionInterface\node_modules\.vite" rd /s /q "VisionInterface\node_modules\.vite"
-call npm cache clean --force --prefix client
+if exist "apps\wraithglass\node_modules\.vite" rd /s /q "apps\wraithglass\node_modules\.vite"
+call npm cache clean --force --prefix apps\wraithglass
 echo [OK] NPM cache cleared.
 
 echo.
 echo [3/4] Reinstalling Python Dependencies (Force)...
-if exist "CognitiveCore\requirements.txt" (
-    pip install --upgrade --force-reinstall -r CognitiveCore\requirements.txt
+if exist "packages\umbracore\requirements.txt" (
+    pip install --upgrade --force-reinstall -r packages\umbracore\requirements.txt
 )
 
 echo.
 echo [4/4] Reinstalling Node Dependencies...
-if exist "VisionInterface\node_modules" rd /s /q "VisionInterface\node_modules"
-if exist "VisionInterface\package-lock.json" del /f /q "VisionInterface\package-lock.json"
-call npm install --prefix client
+if exist "apps\wraithglass\node_modules" rd /s /q "apps\wraithglass\node_modules"
+if exist "apps\wraithglass\package-lock.json" del /f /q "apps\wraithglass\package-lock.json"
+call npm install --prefix apps\wraithglass
 
 echo.
 echo 🎉 Repair Complete! All caches cleared and dependencies rebuilt.
