@@ -12,6 +12,7 @@ const Home     = lazy(() => import('./BespokeViews/Home/index'));
 const Profile = lazy(() => import('./BespokeViews/Profile/index'));
 const Settings = lazy(() => import('./BespokeViews/Settings/index'));
 const SkillTree = lazy(() => import('./BespokeViews/SkillTree/index'));
+const Browser = lazy(() => import('./BespokeViews/Browser/index'));
 
 /* ─── Connection Toast ─────────────────────────────────────────────────── */
 function ConnectionToast({ isConnected, consecutiveErrors }) {

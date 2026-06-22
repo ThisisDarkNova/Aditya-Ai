@@ -203,6 +203,16 @@ class _Handler(SimpleHTTPRequestHandler):
 
         try:
             if path == "/api/status":
+                try:
+                    from NeuralCore.system_monitor import sys_monitor
+                    sys_monitor.start()
+                    cpu, ram_p, ram_free, bat_pct, bat_plugged = sys_monitor.get_health()
+                    with _lock:
+                        _current_status["metrics"]["cpu"] = round(cpu, 1)
+                        _current_status["metrics"]["ram"] = round(ram_p, 1)
+                        _current_status["metrics"]["gpu"] = sys_monitor._gpu_status
+                except Exception as e:
+                    ui_logger.error(f"Failed to update metrics: {e}")
                 with _lock:
                     send_json_response(_current_status)
                 return
