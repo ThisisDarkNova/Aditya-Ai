@@ -1,0 +1,4 @@
+[build]
+  base = "apps/lumen-desk"
+  command = "npm run build"
+  publish = ".next"
